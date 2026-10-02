@@ -1,0 +1,702 @@
+[
+ {
+  "name": "ROCK_BLOCK_01",
+  "coll": "ROCK_BLOCKS",
+  "tris": 816,
+  "size": [
+   1.7,
+   1.28,
+   0.9
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_02",
+  "coll": "ROCK_BLOCKS",
+  "tris": 756,
+  "size": [
+   1.88,
+   1.49,
+   0.69
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_03",
+  "coll": "ROCK_BLOCKS",
+  "tris": 756,
+  "size": [
+   1.47,
+   1.31,
+   1.09
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_04",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1356,
+  "size": [
+   1.39,
+   1.39,
+   0.89
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_05",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1250,
+  "size": [
+   1.6,
+   1.39,
+   1.4
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_06",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1208,
+  "size": [
+   1.7,
+   1.32,
+   0.9
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_07",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1148,
+  "size": [
+   1.29,
+   1.22,
+   1.6
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_08",
+  "coll": "ROCK_BLOCKS",
+  "tris": 674,
+  "size": [
+   1.66,
+   1.31,
+   1.9
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_09",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1098,
+  "size": [
+   2.09,
+   1.28,
+   0.8
+  ]
+ },
+ {
+  "name": "ROCK_BLOCK_10",
+  "coll": "ROCK_BLOCKS",
+  "tris": 1260,
+  "size": [
+   1.71,
+   1.39,
+   1.1
+  ]
+ },
+ {
+  "name": "ROCK_S_01",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 20,
+  "size": [
+   0.69,
+   0.67,
+   0.49
+  ]
+ },
+ {
+  "name": "ROCK_S_02",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 20,
+  "size": [
+   0.95,
+   0.93,
+   0.7
+  ]
+ },
+ {
+  "name": "ROCK_S_03",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 188,
+  "size": [
+   0.91,
+   0.83,
+   0.31
+  ]
+ },
+ {
+  "name": "ROCK_S_04",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 20,
+  "size": [
+   0.83,
+   0.62,
+   0.59
+  ]
+ },
+ {
+  "name": "ROCK_S_05",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 16,
+  "size": [
+   0.64,
+   0.67,
+   0.9
+  ]
+ },
+ {
+  "name": "ROCK_S_06",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 52,
+  "size": [
+   0.82,
+   0.57,
+   1.05
+  ]
+ },
+ {
+  "name": "ROCK_S_07",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 188,
+  "size": [
+   1.12,
+   0.84,
+   0.34
+  ]
+ },
+ {
+  "name": "ROCK_S_08",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 390,
+  "size": [
+   1.24,
+   0.87,
+   0.7
+  ]
+ },
+ {
+  "name": "ROCK_S_09",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 148,
+  "size": [
+   0.69,
+   0.76,
+   0.13
+  ]
+ },
+ {
+  "name": "ROCK_S_10",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 192,
+  "size": [
+   0.78,
+   0.56,
+   0.19
+  ]
+ },
+ {
+  "name": "ROCK_S_11",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 386,
+  "size": [
+   1.34,
+   0.9,
+   0.69
+  ]
+ },
+ {
+  "name": "ROCK_S_12",
+  "coll": "ROCK_VARIATIONS",
+  "tris": 16,
+  "size": [
+   0.63,
+   0.66,
+   0.74
+  ]
+ },
+ {
+  "name": "BOULDER_01",
+  "coll": "BOULDERS",
+  "tris": 114,
+  "size": [
+   3.09,
+   2.55,
+   1.44
+  ]
+ },
+ {
+  "name": "BOULDER_02",
+  "coll": "BOULDERS",
+  "tris": 136,
+  "size": [
+   2.05,
+   1.99,
+   2.25
+  ]
+ },
+ {
+  "name": "BOULDER_03",
+  "coll": "BOULDERS",
+  "tris": 80,
+  "size": [
+   2.9,
+   2.54,
+   2.0
+  ]
+ },
+ {
+  "name": "BOULDER_04",
+  "coll": "BOULDERS",
+  "tris": 132,
+  "size": [
+   2.02,
+   1.86,
+   1.4
+  ]
+ },
+ {
+  "name": "BOULDER_05",
+  "coll": "BOULDERS",
+  "tris": 136,
+  "size": [
+   2.27,
+   2.39,
+   2.6
+  ]
+ },
+ {
+  "name": "NATURAL_ARCH_01",
+  "coll": "ROCK_FORMATIONS",
+  "tris": 4252,
+  "size": [
+   9.6,
+   2.85,
+   6.78
+  ]
+ },
+ {
+  "name": "ROCK_FORMATION_01",
+  "coll": "ROCK_FORMATIONS",
+  "tris": 1042,
+  "size": [
+   2.96,
+   2.77,
+   5.54
+  ]
+ },
+ {
+  "name": "ROCK_PILLAR_01",
+  "coll": "ROCK_FORMATIONS",
+  "tris": 1256,
+  "size": [
+   1.7,
+   1.61,
+   7.5
+  ]
+ },
+ {
+  "name": "ROCK_PILLAR_02",
+  "coll": "ROCK_FORMATIONS",
+  "tris": 1958,
+  "size": [
+   1.44,
+   1.67,
+   8.52
+  ]
+ },
+ {
+  "name": "ROCK_WALL_01",
+  "coll": "ROCK_FORMATIONS",
+  "tris": 1460,
+  "size": [
+   4.08,
+   1.1,
+   1.3
+  ]
+ },
+ {
+  "name": "CLIFF_STRAIGHT_01",
+  "coll": "CLIFFS",
+  "tris": 2146,
+  "size": [
+   4.0,
+   1.85,
+   4.52
+  ]
+ },
+ {
+  "name": "CLIFF_STRAIGHT_02",
+  "coll": "CLIFFS",
+  "tris": 2096,
+  "size": [
+   4.0,
+   1.86,
+   4.36
+  ]
+ },
+ {
+  "name": "CLIFF_CORNER_01",
+  "coll": "CLIFFS",
+  "tris": 1594,
+  "size": [
+   3.01,
+   3.01,
+   4.0
+  ]
+ },
+ {
+  "name": "CLIFF_CORNER_02",
+  "coll": "CLIFFS",
+  "tris": 2023,
+  "size": [
+   3.01,
+   3.02,
+   6.3
+  ]
+ },
+ {
+  "name": "CLIFF_END_01",
+  "coll": "CLIFFS",
+  "tris": 998,
+  "size": [
+   3.55,
+   1.79,
+   4.0
+  ]
+ },
+ {
+  "name": "CLIFF_TOWER_01",
+  "coll": "CLIFFS",
+  "tris": 1052,
+  "size": [
+   3.3,
+   3.18,
+   7.64
+  ]
+ },
+ {
+  "name": "CLIFF_TOWER_02",
+  "coll": "CLIFFS",
+  "tris": 1268,
+  "size": [
+   3.49,
+   3.21,
+   8.7
+  ]
+ },
+ {
+  "name": "GROUND_FLAT_01",
+  "coll": "GROUND",
+  "tris": 764,
+  "size": [
+   4.0,
+   4.0,
+   0.27
+  ]
+ },
+ {
+  "name": "GROUND_SLOPE_01",
+  "coll": "GROUND",
+  "tris": 764,
+  "size": [
+   4.0,
+   4.0,
+   1.05
+  ]
+ },
+ {
+  "name": "GROUND_RAISED_01",
+  "coll": "GROUND",
+  "tris": 1452,
+  "size": [
+   4.02,
+   4.14,
+   0.9
+  ]
+ },
+ {
+  "name": "GROUND_ROCKY_01",
+  "coll": "GROUND",
+  "tris": 770,
+  "size": [
+   4.0,
+   4.0,
+   0.54
+  ]
+ },
+ {
+  "name": "CACTUS_TALL_01",
+  "coll": "VEGETATION",
+  "tris": 448,
+  "size": [
+   1.07,
+   0.4,
+   2.2
+  ]
+ },
+ {
+  "name": "CACTUS_TALL_02",
+  "coll": "VEGETATION",
+  "tris": 438,
+  "size": [
+   0.38,
+   1.02,
+   2.0
+  ]
+ },
+ {
+  "name": "CACTUS_MED_01",
+  "coll": "VEGETATION",
+  "tris": 258,
+  "size": [
+   0.61,
+   0.34,
+   1.3
+  ]
+ },
+ {
+  "name": "CACTUS_ARM_01",
+  "coll": "VEGETATION",
+  "tris": 630,
+  "size": [
+   0.95,
+   0.61,
+   1.6
+  ]
+ },
+ {
+  "name": "CACTUS_SMALL_01",
+  "coll": "VEGETATION",
+  "tris": 158,
+  "size": [
+   0.56,
+   0.57,
+   0.58
+  ]
+ },
+ {
+  "name": "GRASS_BUSH_01",
+  "coll": "VEGETATION",
+  "tris": 220,
+  "size": [
+   0.87,
+   0.78,
+   0.46
+  ]
+ },
+ {
+  "name": "GRASS_BUSH_02",
+  "coll": "VEGETATION",
+  "tris": 160,
+  "size": [
+   0.79,
+   0.66,
+   0.35
+  ]
+ },
+ {
+  "name": "GRASS_BUSH_03",
+  "coll": "VEGETATION",
+  "tris": 120,
+  "size": [
+   0.36,
+   0.36,
+   0.23
+  ]
+ },
+ {
+  "name": "YUCCA_PLANT_01",
+  "coll": "VEGETATION",
+  "tris": 200,
+  "size": [
+   0.97,
+   1.26,
+   0.85
+  ]
+ },
+ {
+  "name": "DESERT_SHRUB_01",
+  "coll": "VEGETATION",
+  "tris": 276,
+  "size": [
+   0.8,
+   0.88,
+   0.5
+  ]
+ },
+ {
+  "name": "DESERT_SHRUB_02",
+  "coll": "VEGETATION",
+  "tris": 160,
+  "size": [
+   0.83,
+   0.83,
+   0.39
+  ]
+ },
+ {
+  "name": "AGAVE_PLANT_01",
+  "coll": "VEGETATION",
+  "tris": 170,
+  "size": [
+   1.08,
+   1.1,
+   0.32
+  ]
+ },
+ {
+  "name": "FLOWER_PLANT_01",
+  "coll": "VEGETATION",
+  "tris": 320,
+  "size": [
+   0.68,
+   0.78,
+   0.6
+  ]
+ },
+ {
+  "name": "DRY_BUSH_01",
+  "coll": "VEGETATION",
+  "tris": 576,
+  "size": [
+   0.59,
+   0.67,
+   0.69
+  ]
+ },
+ {
+  "name": "BONE_RIB_01",
+  "coll": "PROPS",
+  "tris": 152,
+  "size": [
+   2.76,
+   0.26,
+   1.36
+  ]
+ },
+ {
+  "name": "BONE_RIB_02",
+  "coll": "PROPS",
+  "tris": 152,
+  "size": [
+   3.25,
+   0.98,
+   1.64
+  ]
+ },
+ {
+  "name": "BONE_RIB_03",
+  "coll": "PROPS",
+  "tris": 304,
+  "size": [
+   3.49,
+   0.85,
+   1.46
+  ]
+ },
+ {
+  "name": "WOOD_FENCE_01",
+  "coll": "PROPS",
+  "tris": 220,
+  "size": [
+   2.29,
+   0.19,
+   1.0
+  ]
+ },
+ {
+  "name": "WOOD_FENCE_02",
+  "coll": "PROPS",
+  "tris": 176,
+  "size": [
+   2.46,
+   0.2,
+   1.01
+  ]
+ },
+ {
+  "name": "DEAD_TREE_01",
+  "coll": "PROPS",
+  "tris": 428,
+  "size": [
+   2.07,
+   0.93,
+   3.32
+  ]
+ },
+ {
+  "name": "SIGN_POST_01",
+  "coll": "PROPS",
+  "tris": 168,
+  "size": [
+   1.96,
+   0.33,
+   1.7
+  ]
+ },
+ {
+  "name": "CRATE_01",
+  "coll": "PROPS",
+  "tris": 396,
+  "size": [
+   0.71,
+   0.71,
+   0.7
+  ]
+ },
+ {
+  "name": "BARREL_01",
+  "coll": "PROPS",
+  "tris": 338,
+  "size": [
+   0.67,
+   0.67,
+   0.86
+  ]
+ },
+ {
+  "name": "BONE_PILE_01",
+  "coll": "PROPS",
+  "tris": 656,
+  "size": [
+   1.69,
+   1.04,
+   0.39
+  ]
+ },
+ {
+  "name": "ROCK_DEBRIS_01",
+  "coll": "EXTRAS",
+  "tris": 216,
+  "size": [
+   0.93,
+   1.15,
+   0.25
+  ]
+ },
+ {
+  "name": "ROCK_STACK_01",
+  "coll": "EXTRAS",
+  "tris": 1100,
+  "size": [
+   0.8,
+   0.79,
+   0.84
+  ]
+ },
+ {
+  "name": "ROCK_DEBRIS_02",
+  "coll": "EXTRAS",
+  "tris": 256,
+  "size": [
+   1.55,
+   0.56,
+   0.24
+  ]
+ }
+]
