@@ -1,0 +1,53 @@
+{
+ "stage": "done",
+ "bake": {
+  "T_DRL_DrillVehicle_px_per_m": 268,
+  "T_DRL_Drill_Standard_px_per_m": 410,
+  "T_DRL_DrillVehicle": {
+   "BaseColor": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_DrillVehicle_BaseColor.png",
+   "Normal": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_DrillVehicle_Normal.png",
+   "Mask": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_DrillVehicle_Mask.png",
+   "Emission": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_DrillVehicle_Emission.png"
+  },
+  "T_DRL_Drill_Standard": {
+   "BaseColor": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_Drill_Standard_BaseColor.png",
+   "Normal": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_Drill_Standard_Normal.png",
+   "Mask": "D:\\Drillex\\Assets\\Art\\Vehicles\\DRL_DrillVehicle\\Textures\\T_DRL_Drill_Standard_Mask.png"
+  }
+ },
+ "export": {
+  "tris": {
+   "VehicleBody": [
+    5010,
+    2254
+   ],
+   "Turret": [
+    1100,
+    494
+   ],
+   "Cannon": [
+    390,
+    175
+   ],
+   "DrillBase": [
+    416,
+    208
+   ],
+   "DrillSections": [
+    1856,
+    928
+   ],
+   "DrillTip": [
+    96,
+    48
+   ],
+   "Wheel": [
+    3136,
+    3136
+   ]
+  },
+  "lod0_total": 12004,
+  "lod1_total": 7243
+ },
+ "seconds": 85
+}
