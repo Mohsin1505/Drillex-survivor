@@ -206,7 +206,12 @@ def cull_hidden(groups):
         for f in bm.faces:
             c = f.calc_center_median()
             n = f.normal
-            probes = [c + n * 0.002] + [(v.co.lerp(c, 0.12)) + n * 0.002 for v in f.verts]
+            # sample the whole face (centre, corners, edge midpoints, half-way points) so a face is only
+            # removed when it is fully buried, not when a few small parts happen to cover the sample points
+            vs = [v.co for v in f.verts]
+            pts = [c] + [v.lerp(c, 0.12) for v in vs] + [v.lerp(c, 0.5) for v in vs]
+            pts += [vs[i].lerp(vs[(i + 1) % len(vs)], 0.5).lerp(c, 0.12) for i in range(len(vs))]
+            probes = [p + n * 0.002 for p in pts]
             if all(inside(p, o) for p in probes):
                 dead.append(f)
         if dead:

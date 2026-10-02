@@ -47,6 +47,8 @@ def game_material():
     nmap = nt.nodes.new("ShaderNodeNormalMap")
     nt.links.new(img("Normal", True).outputs[0], nmap.inputs["Color"])
     nt.links.new(nmap.outputs[0], bsdf.inputs["Normal"])
+    nt.links.new(img("Emission", False).outputs[0], bsdf.inputs["Emission Color"])
+    bsdf.inputs["Emission Strength"].default_value = 1.5
     return m
 
 
@@ -62,7 +64,7 @@ def run():
     rivet = 1.0 / max(bk.texel_scale(obs) * 0.06, 1e-6)
     for m in {s.material for o in obs for s in o.material_slots if s.material}:
         bk.build_material(m.name[2:], rivet)
-    maps = bk.bake_set(SET, OBJS, 1024, None, TEX)   # no glowing parts on this car: no emission map
+    maps = bk.bake_set(SET, OBJS, 1024, 1024, TEX)
     gm = game_material()
     for o in bpy.data.objects:
         if o.type == 'MESH':

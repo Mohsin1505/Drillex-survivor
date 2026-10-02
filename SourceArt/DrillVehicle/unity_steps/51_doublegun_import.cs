@@ -35,6 +35,7 @@ internal class CommandScript : IRunCommand
         Tex(t + "BaseColor.png", true, false, 1024, 1024);
         Tex(t + "Normal.png", false, true, 1024, 1024);
         Tex(t + "Mask.png", false, false, 1024, 1024);
+        Tex(t + "Emission.png", true, false, 1024, 512);
 
         var mi = (ModelImporter)AssetImporter.GetAtPath(Root + "/Meshes/SM_DRL_DoubleGunCar.fbx");
         mi.globalScale = 1f;
@@ -73,9 +74,10 @@ internal class CommandScript : IRunCommand
         m.SetTexture("_OcclusionMap", mask);
         m.SetFloat("_OcclusionStrength", 1f);
         m.EnableKeyword("_OCCLUSIONMAP");
-        m.SetColor("_EmissionColor", Color.black);
-        m.DisableKeyword("_EMISSION");
-        m.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+        m.SetTexture("_EmissionMap", AssetDatabase.LoadAssetAtPath<Texture2D>(t + "Emission.png"));
+        m.SetColor("_EmissionColor", Color.white * 2.5f);
+        m.EnableKeyword("_EMISSION");
+        m.globalIlluminationFlags = MaterialGlobalIlluminationFlags.RealtimeEmissive;
         m.enableInstancing = true;
         EditorUtility.SetDirty(m);
         AssetDatabase.SaveAssets();

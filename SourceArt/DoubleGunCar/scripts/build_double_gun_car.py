@@ -1,7 +1,7 @@
 """
 Drillex Double-Barrel Gun Car - Blender 5.2 build. Body box identical to the Basic Gun Car
 (1.10 m wide incl. pillars, body top 0.98 m, 2.04 m long incl. couplers); the turret is lower than
-the Basic Gun turret and the two identical parallel cannons share one mesh.
+the Basic Gun turret and the two identical parallel cannons share one mesh. Side and end panels match the Basic Gun car.
 
 Conventions: meters, Z up, front faces -Y, root pivot on the ground under the car center.
 Game scene:
@@ -75,33 +75,41 @@ def build_body(c):
             box(g, c, H, *xs(sx, 0.53, 0.545), *ys(sy, 0.77, 0.87), 0.47, 0.86, 0.004, name="pillar_hazard")
             box(g, c, S, *xs(sx, 0.38, 0.55), *ys(sy, 0.73, 0.91), 0.93, 0.98, 0.01, name="pillar_cap")
 
-    # ---- sides: pipe runs, piston housings, rear grille (no lamps, no doors) ----
+    # ---- sides ----
     for sx in (-1, 1):
-        ax = 'X' if sx > 0 else '-X'
-        for z in (0.56, 0.78):
-            cyl(g, c, Y, (sx * 0.49, 0.0, z), 0.022, 1.36, 'Y', 10, name="side_pipe")
-            for y in (-0.55, -0.15, 0.25):
-                box(g, c, K, *xs(sx, 0.46, 0.515), y - 0.03, y + 0.03, z - 0.035, z + 0.035, 0.004, name="pipe_clamp")
-        box(g, c, H, *xs(sx, 0.46, 0.475), -0.62, 0.30, 0.64, 0.70, 0.0, name="side_hazard")
-        for y in (-0.58, 0.58):
-            box(g, c, K, *xs(sx, 0.455, 0.50), y - 0.09, y + 0.09, 0.50, 0.84, 0.01, name="piston_housing")
-            cyl(g, c, S, (sx * 0.505, y, 0.67), 0.05, 0.03, ax, 12, name="piston_cap")
-            cyl(g, c, B, (sx * 0.52, y, 0.67), 0.025, 0.02, ax, 8, name="piston_bolt")
-        box(g, c, K, *xs(sx, 0.455, 0.485), 0.30, 0.46, 0.53, 0.72, 0.006, name="side_grille_frame")
-        box(g, c, "Grille", *xs(sx, 0.475, 0.49), 0.32, 0.44, 0.55, 0.70, 0.0, name="side_grille")
+        # main vent with lamp strip
+        box(g, c, K, *xs(sx, 0.455, 0.485), -0.30, 0.18, 0.49, 0.80, 0.01, name="vent_frame")
+        box(g, c, "Grille", *xs(sx, 0.475, 0.49), -0.26, 0.14, 0.52, 0.70, 0.0, name="vent")
+        box(g, c, "WindowGlow", *xs(sx, 0.478, 0.492), -0.22, 0.10, 0.72, 0.77, 0.0, name="lamp_strip")
+        for y in (-0.14, -0.06, 0.02):
+            box(g, c, K, *xs(sx, 0.48, 0.496), y - 0.007, y + 0.007, 0.715, 0.775, 0.0, name="strip_divider")
+        # small rear vent
+        box(g, c, K, *xs(sx, 0.455, 0.485), 0.30, 0.62, 0.52, 0.78, 0.008, name="vent2_frame")
+        box(g, c, "Grille", *xs(sx, 0.475, 0.49), 0.33, 0.59, 0.55, 0.75, 0.0, name="vent2")
+        # yellow pipes beside the main vent
+        for y in (-0.42, -0.36, 0.23):
+            cyl(g, c, Y, (sx * 0.49, y, 0.65), 0.016, 0.34, 'Z', 8, name="side_pipe")
+        for y, z in ((-0.39, 0.50), (-0.39, 0.80), (0.23, 0.50), (0.23, 0.80)):
+            box(g, c, B, *xs(sx, 0.46, 0.505), y - 0.05, y + 0.05, z - 0.012, z + 0.012, 0.004, name="pipe_clamp")
+        # gauge box near the front pillar
+        box(g, c, S, *xs(sx, 0.46, 0.51), -0.66, -0.56, 0.47, 0.57, 0.008, name="gauge_box")
+        cyl(g, c, K, (sx * 0.515, -0.61, 0.52), 0.035, 0.012, 'X' if sx > 0 else '-X', 12, name="gauge")
 
-    # ---- ends: grille panel, piston housings, pipes ----
+    # ---- ends: lamps, grille, pipes ----
     for sy in (-1, 1):
         ax = 'Y' if sy > 0 else '-Y'
         box(g, c, "Camo", -0.40, 0.40, *ys(sy, 0.76, 0.90), 0.40, 0.92, 0.02, name="end_panel")
-        box(g, c, Y, -0.20, 0.20, *ys(sy, 0.89, 0.91), 0.47, 0.70, 0.006, name="end_plate")
-        box(g, c, K, -0.15, 0.15, *ys(sy, 0.905, 0.92), 0.50, 0.66, 0.006, name="end_grille_frame")
-        box(g, c, "Grille", -0.12, 0.12, *ys(sy, 0.912, 0.928), 0.52, 0.64, 0.0, name="end_grille")
+        box(g, c, K, -0.24, 0.24, *ys(sy, 0.89, 0.915), 0.47, 0.76, 0.008, name="end_grille_frame")
+        box(g, c, "Grille", -0.20, 0.20, *ys(sy, 0.905, 0.925), 0.50, 0.66, 0.0, name="end_grille")
+        box(g, c, "WindowGlow", -0.16, 0.16, *ys(sy, 0.905, 0.922), 0.68, 0.73, 0.0, name="end_strip")
         for sx in (-1, 1):
-            box(g, c, K, *xs(sx, 0.24, 0.38), *ys(sy, 0.86, 0.94), 0.50, 0.76, 0.01, name="end_housing")
-            cyl(g, c, S, (sx * 0.31, sy * 0.945, 0.63), 0.045, 0.03, ax, 12, name="end_cap")
-        cyl(g, c, Y, (0, sy * 0.925, 0.80), 0.02, 0.70, 'X', 10, name="end_pipe")
-        cyl(g, c, S, (0, sy * 0.925, 0.43), 0.02, 0.70, 'X', 10, name="end_pipe_low")
+            box(g, c, "Camo", *xs(sx, 0.28, 0.42), *ys(sy, 0.86, 0.95), 0.72, 0.88, 0.012, name="lamp_block")
+            lamp(g, c, (sx * 0.35, sy * 0.95, 0.80), ax, 0.05)
+            for x in (0.30, 0.36):
+                cyl(g, c, Y, (sx * x, sy * 0.925, 0.55), 0.015, 0.26, 'Z', 8, name="end_pipe")
+        # corner marker lamps on the pillars
+        for sx in (-1, 1):
+            lamp(g, c, (sx * 0.47, sy * 0.905, 0.91), ax, 0.03)
 
     # ---- undercarriage (same kit as the storage car) ----
     box(g, c, K, -0.40, 0.40, -0.86, 0.86, 0.27, 0.37, 0.012, name="underframe")
