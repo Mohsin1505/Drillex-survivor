@@ -56,22 +56,26 @@ def build_body(c):
     R, K, S, B, Y, H = "RedPaint", "BlackMetal", "Steel", "Brass", "YellowPaint", "Hazard"
 
     # ---- shell ----
-    box(g, c, "Camo", -0.46, 0.46, -0.76, 0.76, 0.45, 0.87, 0.035, name="shell")
+    box(g, c, "Camo", -0.46, 0.46, -0.90, 0.90, 0.45, 0.92, 0.012, name="body_block")  # walls + ends + top
     box(g, c, K, -0.48, 0.48, -0.86, 0.86, 0.36, 0.46, 0.012, name="sill_frame")
     for sx in (-1, 1):
         box(g, c, H, *xs(sx, 0.47, 0.495), -0.74, 0.74, 0.375, 0.455, 0.006, name="sill_hazard")
     for sy in (-1, 1):
         box(g, c, H, -0.40, 0.40, *ys(sy, 0.86, 0.885), 0.375, 0.455, 0.006, name="sill_hazard_end")
     # hazard top rim + black roof deck
-    box(g, c, H, -0.475, 0.475, -0.78, 0.78, 0.86, 0.925, 0.01, name="top_rim")
-    box(g, c, "Camo", -0.42, 0.42, -0.72, 0.72, 0.915, 0.95, 0.01, name="roof_deck")
+    # hazard trim band around the top of the block (thin, proud of the faces, flush with the top)
+    for sx in (-1, 1):
+        box(g, c, H, *xs(sx, 0.455, 0.472), -0.74, 0.74, 0.855, 0.92, 0.004, name="top_trim_side")
+    for sy in (-1, 1):
+        box(g, c, H, -0.40, 0.40, *ys(sy, 0.895, 0.912), 0.855, 0.92, 0.004, name="top_trim_end")
+    box(g, c, "Camo", -0.42, 0.42, -0.72, 0.72, 0.92, 0.95, 0.008, name="roof_deck")  # sits on the block top
     for y in (-0.55, 0.55):
         box(g, c, "Grille", -0.12, 0.12, y - 0.08, y + 0.08, 0.94, 0.965, 0.004, name="roof_vent")
 
     # ---- corner pillars ----
     for sx in (-1, 1):
         for sy in (-1, 1):
-            box(g, c, K, *xs(sx, 0.40, 0.53), *ys(sy, 0.74, 0.90), 0.36, 0.95, 0.02, name="pillar")
+            box(g, c, K, *xs(sx, 0.40, 0.53), *ys(sy, 0.74, 0.92), 0.36, 0.95, 0.02, name="pillar")  # wraps the block corner
             box(g, c, H, *xs(sx, 0.53, 0.545), *ys(sy, 0.77, 0.87), 0.47, 0.86, 0.004, name="pillar_hazard")
             box(g, c, S, *xs(sx, 0.38, 0.55), *ys(sy, 0.73, 0.91), 0.93, 0.98, 0.01, name="pillar_cap")
 
@@ -98,7 +102,6 @@ def build_body(c):
     # ---- ends: lamps, grille, pipes ----
     for sy in (-1, 1):
         ax = 'Y' if sy > 0 else '-Y'
-        box(g, c, "Camo", -0.40, 0.40, *ys(sy, 0.76, 0.90), 0.40, 0.92, 0.02, name="end_panel")
         box(g, c, K, -0.24, 0.24, *ys(sy, 0.89, 0.915), 0.47, 0.76, 0.008, name="end_grille_frame")
         box(g, c, "Grille", -0.20, 0.20, *ys(sy, 0.905, 0.925), 0.50, 0.66, 0.0, name="end_grille")
         box(g, c, "WindowGlow", -0.16, 0.16, *ys(sy, 0.905, 0.922), 0.68, 0.73, 0.0, name="end_strip")
