@@ -36,6 +36,8 @@ public class DrillVehicleAnimator : MonoBehaviour
     [Header("Wheels")]
     public float wheelRadius = 0.17f;
 
+    public float maxWheelDegreesPerFrame = 20f;
+
 
     private Transform drillRotor;
 
@@ -97,6 +99,9 @@ public class DrillVehicleAnimator : MonoBehaviour
         if (wheels != null && wheelRadius > 0f)
         {
             float degrees = speed / wheelRadius * Mathf.Rad2Deg * Time.deltaTime;
+
+            // avoid the wagon-wheel effect (spokes look frozen near one spoke gap per frame)
+            degrees = Mathf.Clamp(degrees, -maxWheelDegreesPerFrame, maxWheelDegreesPerFrame);
 
             foreach (Transform wheel in wheels)
             {
