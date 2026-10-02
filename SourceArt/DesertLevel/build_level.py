@@ -89,7 +89,7 @@ def build_terrain(coll, mat, step=1.5):
         slope = 1.0 - p.normal.z
         n = noise.noise(Vector((c.x * 0.08, c.y * 0.08, 4.0)))
         if dx < CORRIDOR + 0.6:
-            row, col = 1, 6
+            row, col = 1, 5
         elif slope > 0.22 and dx > 14:
             row, col = 0, 4 + (1 if n > 0 else 0)
         else:
@@ -204,6 +204,14 @@ def build_level():
         P.put(name, px, y, "CANYON_WALLS", rot=deg(-90) + rng.uniform(-0.3, 0.3), scale=s, check=False)
         y += rng.uniform(9.0, 15.0)
 
+    # far-right mesa line: closes the open horizon on the right of the gameplay view
+    y = 20.0
+    while y < 170:
+        P.put(rng.choice(["CLIFF_TOWER_01", "ROCK_FORMATION_01", "CLIFF_STRAIGHT_02", "CLIFF_TOWER_02"]),
+              path_x(y) + rng.uniform(38.0, 50.0), y, "BACKGROUND", rot=deg(-90) + rng.uniform(-0.4, 0.4),
+              scale=rng.uniform(2.6, 3.8), check=False)
+        y += rng.uniform(10.0, 16.0)
+
     # --- landmarks ------------------------------------------------------------------------------
     P.put("NATURAL_ARCH_01", path_x(112) - 5, 112, "LANDMARKS", rot=deg(8), scale=3.4, check=False)
     for (dy, ox, nm, s) in ((40, 15, "ROCK_PILLAR_02", 2.1), (46, 19, "ROCK_PILLAR_01", 2.4), (52, 14.5, "ROCK_PILLAR_02", 1.6),
@@ -307,6 +315,18 @@ def build_level():
     P.put("GRASS_BUSH_01", path_x(-11) - 6.8, -11, "FOREGROUND", rot=0.0, scale=1.8, check=False, sink=0.02)
     P.put("ROCK_DEBRIS_02", path_x(-9) + 8.0, -9, "FOREGROUND", rot=deg(10), scale=1.8, check=False)
 
+    P.put("ROCK_BLOCK_02", path_x(-2) - 10.5, -2, "FOREGROUND", rot=deg(12), scale=2.6, check=False)
+    P.put("BOULDER_01", path_x(4) - 12.5, 4, "FOREGROUND", rot=deg(60), scale=2.0, check=False)
+    P.put("ROCK_BLOCK_10", path_x(-3) + 11.0, -3, "FOREGROUND", rot=deg(-20), scale=2.0, check=False)
+    for k, (dx, dy) in enumerate(((-7.0, -1), (-8.2, 1.5), (-6.4, 3.5), (7.2, 2), (8.0, 5), (-7.4, 8))):
+        P.put(("GRASS_BUSH_01", "GRASS_BUSH_03", "GRASS_BUSH_02")[k % 3], path_x(dy) + dx, dy, "FOREGROUND",
+              rot=k * 1.7, scale=2.2, check=False, sink=0.02)
+    for k in range(10):
+        yy = 4 + k * 2.6
+        d = path_dir(yy)
+        P.put("WOOD_FENCE_02" if k in (2, 7) else "WOOD_FENCE_01", path_x(yy) - 6.6, yy, "PROPS",
+              rot=math.atan2(d.y, d.x) + rng.uniform(-0.08, 0.08), scale=1.1, sink=0.15, check=False)
+
     # --- the train on its route ---------------------------------------------------------------------
     place_train(colls["TRAIN"])
     setup_lighting(scene, colls["LIGHTING"])
@@ -340,58 +360,86 @@ def place_train(coll):
         root.rotation_euler = (0, 0, math.atan2(d.y, d.x) - math.pi / 2)
 
 
+SUN_DIR = Vector((0.45, -0.80, -0.34)).normalized()   # light travel: low sun from the back-left, lights the train's camera-facing sides
+GLOW_DIR = Vector((-0.05, 1.0, 0.07)).normalized()     # where the sunset glow sits on the horizon (behind the arch)
+
+
 def setup_lighting(scene, coll):
-    # warm low sun from behind the canyon -> rim light + long shadows toward the camera
+    # low sunset sun straight down the canyon (behind the arch): rim light on the train, long shadows toward camera
     sun = bpy.data.objects.new("SUN_Sunset", bpy.data.lights.new("SUN_Sunset", 'SUN'))
     coll.objects.link(sun)
-    sun.data.energy = 5.5
-    sun.data.color = (1.0, 0.62, 0.34)
+    sun.data.energy = 6.0
+    sun.data.color = (1.0, 0.60, 0.30)
     sun.data.angle = math.radians(2.5)
-    d = Vector((-0.55, -0.80, -0.26)).normalized()
-    sun.rotation_euler = d.to_track_quat('-Z', 'Y').to_euler()
-    # soft cool-warm fill from the opposite side (keeps shadows from going black)
+    sun.rotation_euler = SUN_DIR.to_track_quat('-Z', 'Y').to_euler()
+    # cool sky fill from the camera side: shadows read blue-violet instead of black, no shadow cost
     fill = bpy.data.objects.new("SUN_Fill", bpy.data.lights.new("SUN_Fill", 'SUN'))
     coll.objects.link(fill)
-    fill.data.energy = 0.35
-    fill.data.color = (0.85, 0.72, 0.68)
+    fill.data.energy = 0.55
+    fill.data.color = (0.55, 0.62, 0.95)
     fill.data.angle = math.radians(20)
     fill.data.use_shadow = False
-    fill.rotation_euler = Vector((-0.5, 0.7, -0.5)).normalized().to_track_quat('-Z', 'Y').to_euler()
+    fill.rotation_euler = Vector((-0.2, 0.8, -0.55)).normalized().to_track_quat('-Z', 'Y').to_euler()
 
-    # sky: warm horizon glow -> dusty upper sky, plus light volumetric haze for depth
+    # sky: deep dusk gradient + bright sun glow on the horizon behind the arch
     w = bpy.data.worlds.new("WORLD_DesertSunset")
     scene.world = w
     w.use_nodes = True
     nt = w.node_tree
     nt.nodes.clear()
-    out = nt.nodes.new("ShaderNodeOutputWorld")
-    bg = nt.nodes.new("ShaderNodeBackground")
-    tc = nt.nodes.new("ShaderNodeTexCoord")
-    sep = nt.nodes.new("ShaderNodeSeparateXYZ")
-    ramp = nt.nodes.new("ShaderNodeValToRGB")
-    nt.links.new(tc.outputs["Generated"], sep.inputs[0])
-    nt.links.new(sep.outputs["Z"], ramp.inputs[0])
+    N, L = nt.nodes.new, nt.links.new
+    out = N("ShaderNodeOutputWorld")
+    bg = N("ShaderNodeBackground")
+    tc = N("ShaderNodeTexCoord")
+    sep = N("ShaderNodeSeparateXYZ")
+    ramp = N("ShaderNodeValToRGB")
+    L(tc.outputs["Generated"], sep.inputs[0])
+    L(sep.outputs["Z"], ramp.inputs[0])
     els = ramp.color_ramp.elements
-    els[0].position = 0.48
-    els[0].color = (0.95, 0.55, 0.28, 1)
-    els[1].position = 0.75
-    els[1].color = (0.42, 0.42, 0.55, 1)
-    mid = els.new(0.54)
-    mid.color = (1.0, 0.72, 0.42, 1)
-    nt.links.new(ramp.outputs[0], bg.inputs["Color"])
-    bg.inputs["Strength"].default_value = 0.55
-    nt.links.new(bg.outputs[0], out.inputs["Surface"])
+    els[0].position, els[0].color = 0.47, (0.55, 0.22, 0.10, 1)
+    els[1].position, els[1].color = 0.80, (0.22, 0.20, 0.32, 1)
+    els.new(0.505).color = (1.0, 0.55, 0.22, 1)
+    els.new(0.60).color = (0.80, 0.42, 0.28, 1)
+    dot = N("ShaderNodeVectorMath")
+    dot.operation = 'DOT_PRODUCT'
+    L(tc.outputs["Generated"], dot.inputs[0])
+    dot.inputs[1].default_value = tuple(GLOW_DIR)
+    mr = N("ShaderNodeMapRange")
+    mr.inputs[1].default_value, mr.inputs[2].default_value = 0.55, 1.0
+    L(dot.outputs["Value"], mr.inputs[0])
+    pw = N("ShaderNodeMath")
+    pw.operation = 'POWER'
+    pw.inputs[1].default_value = 4.0
+    L(mr.outputs[0], pw.inputs[0])
+    glow = N("ShaderNodeMixRGB")
+    glow.blend_type = 'ADD'
+    L(pw.outputs[0], glow.inputs[0])
+    L(ramp.outputs[0], glow.inputs[1])
+    glow.inputs[2].default_value = (2.2, 1.0, 0.35, 1)
+    L(glow.outputs[0], bg.inputs["Color"])
+    bg.inputs["Strength"].default_value = 0.9
+    L(bg.outputs[0], out.inputs["Surface"])
 
+    # haze: none around the train, thickening into the distance (object-space Y gradient)
     haze = bpy.data.materials.new("M_Haze")
     haze.use_nodes = True
     hn = haze.node_tree
     hn.nodes.clear()
-    ho = hn.nodes.new("ShaderNodeOutputMaterial")
-    hv = hn.nodes.new("ShaderNodeVolumePrincipled")
-    hv.inputs["Color"].default_value = (1.0, 0.66, 0.42, 1)
-    hv.inputs["Density"].default_value = 0.0055
-    hv.inputs["Anisotropy"].default_value = 0.5
-    hn.links.new(hv.outputs[0], ho.inputs["Volume"])
+    N, L = hn.nodes.new, hn.links.new
+    ho = N("ShaderNodeOutputMaterial")
+    hv = N("ShaderNodeVolumePrincipled")
+    hv.inputs["Color"].default_value = (1.0, 0.58, 0.32, 1)
+    hv.inputs["Anisotropy"].default_value = 0.6
+    t2 = N("ShaderNodeTexCoord")
+    s2 = N("ShaderNodeSeparateXYZ")
+    r2 = N("ShaderNodeMapRange")
+    L(t2.outputs["Object"], s2.inputs[0])
+    L(s2.outputs["Y"], r2.inputs[0])
+    # object y -0.5..0.5 spans world y -55..245: density ramps from world y ~35 to ~200
+    r2.inputs[1].default_value, r2.inputs[2].default_value = -0.17, 0.35
+    r2.inputs[3].default_value, r2.inputs[4].default_value = 0.0, 0.012
+    L(r2.outputs[0], hv.inputs["Density"])
+    L(hv.outputs[0], ho.inputs["Volume"])
     bm = bmesh.new()
     bmesh.ops.create_cube(bm, size=1.0)
     me = bpy.data.meshes.new("HAZE_Volume")
@@ -400,17 +448,30 @@ def setup_lighting(scene, coll):
     me.materials.append(haze)
     hz = bpy.data.objects.new("HAZE_Volume", me)
     coll.objects.link(hz)
-    hz.location = (0, 95, 12)
-    hz.scale = (180, 300, 30)
+    hz.location = (0, 95, 35)
+    hz.scale = (180, 300, 80)
+
+    # level grade on the (level-local copy of the) kit material: deeper, richer canyon reds
+    km = bpy.data.materials["M_DesertKit"].node_tree
+    tex = next(n for n in km.nodes if n.type == 'TEX_IMAGE')
+    bsdf = next(n for n in km.nodes if n.type == 'BSDF_PRINCIPLED')
+    hsv = km.nodes.get("LVL_Grade") or km.nodes.new("ShaderNodeHueSaturation")
+    hsv.name = "LVL_Grade"
+    km.links.new(tex.outputs["Color"], hsv.inputs["Color"])
+    km.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
+    hsv.inputs["Hue"].default_value = 0.49
+    hsv.inputs["Saturation"].default_value = 1.12
+    hsv.inputs["Value"].default_value = 0.80
 
 
 def setup_camera(scene, coll):
     cam = bpy.data.objects.new("CAM_Gameplay", bpy.data.cameras.new("CAM_Gameplay"))
     coll.objects.link(cam)
-    cam.data.lens = 28
+    cam.data.lens = 27
     cam.data.clip_end = 600
-    pos = Vector((path_x(-6) + 9.0, -9.0, 9.5))
-    tgt = Vector((path_x(32) - 3.0, 32.0, 1.5))
+    # 3/4 gameplay view: a little left of the route, looking down the canyon; train large on the lower right
+    pos = Vector((path_x(0) - 4.0, -6.0, 8.5))
+    tgt = Vector((path_x(30) + 2.5, 30.0, 2.0))
     cam.location = pos
     cam.rotation_euler = (tgt - pos).to_track_quat('-Z', 'Y').to_euler()
     scene.camera = cam
@@ -428,10 +489,10 @@ def setup_camera(scene, coll):
                 pass
     scene.view_settings.view_transform = 'AgX'
     try:
-        scene.view_settings.look = 'AgX - Medium High Contrast'
+        scene.view_settings.look = 'AgX - Punchy'
     except Exception:
-        pass
-    scene.view_settings.exposure = 0.15
+        scene.view_settings.look = 'AgX - Medium High Contrast'
+    scene.view_settings.exposure = 0.35
 
 
 def render(path, cam_name="CAM_Gameplay", res=(1920, 1080)):
