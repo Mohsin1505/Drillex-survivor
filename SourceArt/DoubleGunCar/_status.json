@@ -1,0 +1,30 @@
+{
+ "stage": "done",
+ "build": {
+  "culled": 572,
+  "tris": {
+   "Axle_1": 752,
+   "Axle_2": 752,
+   "Axle_3": 752,
+   "Axle_4": 752,
+   "Body": 3848,
+   "Cannon_L": 574,
+   "Cannon_R": 574,
+   "Turret": 914
+  }
+ },
+ "bake": {
+  "px_per_m": 114,
+  "maps": {
+   "BaseColor": "D:\\Drillex\\SourceArt\\DoubleGunCar\\Textures\\T_DRL_DoubleGunCar_BaseColor.png",
+   "Normal": "D:\\Drillex\\SourceArt\\DoubleGunCar\\Textures\\T_DRL_DoubleGunCar_Normal.png",
+   "Mask": "D:\\Drillex\\SourceArt\\DoubleGunCar\\Textures\\T_DRL_DoubleGunCar_Mask.png"
+  }
+ },
+ "export": [
+  "T_DRL_DoubleGunCar_BaseColor.png",
+  "T_DRL_DoubleGunCar_Mask.png",
+  "T_DRL_DoubleGunCar_Normal.png"
+ ],
+ "sec": 15
+}
