@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4162934284490443094}
-  distance: 20
+  distance: 10
   mouseSensitivity: 3
   minY: 5
   maxY: 70
@@ -16583,14 +16583,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6464854582845502440, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 616788940583856753, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1802554637}
-    - target: {fileID: 4163865027748484277, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: drillingSpeed
-      value: 2
+    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: currentOrb
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: baseStorage
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: storageText
+      value: 
+      objectReference: {fileID: 253486787}
     - target: {fileID: 3267282292380567663, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16631,29 +16643,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: currentOrb
+    - target: {fileID: 4163865027748484277, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: drillingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920083682026121922, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: damageRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920083682026121922, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: drillDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602099738211246883, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: baseStorage
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 3207646045906546603, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: storageText
-      value: 
-      objectReference: {fileID: 253486787}
-    - target: {fileID: 6464854582845502440, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8735906754609507113, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: cooldownSlider
-      value: 
-      objectReference: {fileID: 1443459385}
-    - target: {fileID: 8925582040817569405, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: m_Name
-      value: DRL_DrillVehicle_Train
+    - target: {fileID: 7602099738211246883, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8480223442474385589, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16667,21 +16675,13 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7602099738211246883, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7602099738211246883, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920083682026121922, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: damageRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920083682026121922, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
-      propertyPath: drillDamage
-      value: 3
+    - target: {fileID: 8735906754609507113, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: cooldownSlider
+      value: 
+      objectReference: {fileID: 1443459385}
+    - target: {fileID: 8925582040817569405, guid: 85acff4671ee59f4895699d26f645ac3, type: 3}
+      propertyPath: m_Name
+      value: DRL_DrillVehicle_Train
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

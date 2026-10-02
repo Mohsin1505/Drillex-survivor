@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5439333460047114006, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6762342758156327012, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.26999998
