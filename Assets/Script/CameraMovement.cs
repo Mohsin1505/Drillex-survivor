@@ -34,12 +34,25 @@ public class CameraMovement : MonoBehaviour
 
 
 
+    [Header("Start View")]
+
+    // initial look-down angle (degrees) before the player rotates the camera; 0 = old level-height view
+    public float startPitch = 0f;
+
+
+
 
 
     private float rotationX;
 
     private float rotationY;
 
+
+
+    void Start()
+    {
+        rotationY = startPitch;
+    }
 
 
 
