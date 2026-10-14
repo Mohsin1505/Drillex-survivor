@@ -179,8 +179,8 @@ public static class DrillexWorkshopBuilder
 
         // lock overlay
         var lockO = Img("Lock", body, "ui_panel_dark", A(Color.white, 0.86f), true).rectTransform; Stretch(lockO);
-        var lIcon = Img("Icon", lockO, "lock", TextDim); Place(lIcon.rectTransform, new Vector2(1, 0.5f), new Vector2(-60, 8), new Vector2(54, 54), new Vector2(0.5f, 0.5f));
-        var lText = Text("Text", lockO, "REACH LEVEL 10", 15, TextDim, TextAlignmentOptions.Center); Place(lText.rectTransform, new Vector2(1, 0.5f), new Vector2(-60, -36), new Vector2(160, 22), new Vector2(0.5f, 0.5f));
+        var lIcon = Img("Icon", lockO, "lock", TextDim); Place(lIcon.rectTransform, new Vector2(1, 0), new Vector2(-104, 64), new Vector2(46, 46), new Vector2(0.5f, 0.5f));
+        var lText = Text("Text", lockO, "REACH LEVEL 10", 15, Amber, TextAlignmentOptions.Center); Place(lText.rectTransform, new Vector2(1, 0), new Vector2(-104, 26), new Vector2(184, 22), new Vector2(0.5f, 0.5f));
         // keep icon and title readable over the lock overlay
         plate.transform.SetAsLastSibling(); title.transform.SetAsLastSibling(); badge.transform.SetAsLastSibling();
 
