@@ -115,6 +115,14 @@ public class SmallWorm : MonoBehaviour
 
 
 
+    // Presentation hooks (spider visuals etc.). Gameplay does not depend on them.
+    // Attacked: fired when a damage tick lands, with the thing that was hit.
+    public event System.Action<Transform> Attacked;
+
+    public event System.Action Died;
+
+
+
 
 
 
@@ -654,6 +662,11 @@ public class SmallWorm : MonoBehaviour
                     );
 
 
+                    Attacked?.Invoke(
+                        block.transform
+                    );
+
+
                     attackTimer =
                         0;
 
@@ -691,6 +704,11 @@ public class SmallWorm : MonoBehaviour
 
             currentTrap.TakeDamage(
                 damage
+            );
+
+
+            Attacked?.Invoke(
+                currentTrap.transform
             );
 
 
@@ -777,6 +795,10 @@ public class SmallWorm : MonoBehaviour
             );
 
         }
+
+
+
+        Died?.Invoke();
 
 
 
