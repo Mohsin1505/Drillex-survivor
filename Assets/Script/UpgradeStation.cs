@@ -72,14 +72,14 @@ public class UpgradeStation : MonoBehaviour
 
 
 
-    public void OpenUpgrade()
+        public void OpenUpgrade()
     {
+        if (upgradePanel.activeSelf && Time.timeScale == 0f)
+            return;
 
         upgradePanel.SetActive(true);
-
-
         Time.timeScale = 0f;
-
+        AudioManager.Ui(l => l.uiOpen, 0.8f);
     }
 
 
@@ -89,14 +89,21 @@ public class UpgradeStation : MonoBehaviour
 
 
 
-    public void CloseUpgrade()
+        public void CloseUpgrade()
     {
+        if (upgradePanel.activeSelf)
+        {
+            AudioManager.Ui(l => l.uiClose, 0.8f);
 
-        upgradePanel.SetActive(false);
+            UIPanel panel = upgradePanel.GetComponent<UIPanel>();
+            if (panel != null) panel.Hide();
+            else upgradePanel.SetActive(false);
+        }
 
-
-        Time.timeScale = 1f;
-
+        if (PauseManager.IsPaused)
+            PauseManager.SetResumeTimeScale(1f);
+        else
+            Time.timeScale = 1f;
     }
 
 }

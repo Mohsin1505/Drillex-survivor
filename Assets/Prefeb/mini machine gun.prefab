@@ -315,6 +315,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4361742111309761950, guid: af3b8c17978bd23448d9660ff845571d, type: 3}
   shootPoint: {fileID: 3628674903818717715}
   fireRate: 0.1
+  muzzleFlashPrefab: {fileID: 4830399362730891226, guid: fb3e2f80c0159674e8a59992afbd7829, type: 3}
+  shotSound: 3
+  shotVolume: 0.7
 --- !u!1001 &2233926371250271287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,6 +436,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4361742111309761950, guid: af3b8c17978bd23448d9660ff845571d, type: 3}
   shootPoint: {fileID: 5187045850112702519}
   fireRate: 0.1
+  muzzleFlashPrefab: {fileID: 4830399362730891226, guid: fb3e2f80c0159674e8a59992afbd7829, type: 3}
+  shotSound: 3
+  shotVolume: 0.7
 --- !u!4 &1694332318660495977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 613609362011127390, guid: 62fef08f882c2ed45af9c190df8ac86c, type: 3}

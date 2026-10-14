@@ -93,7 +93,8 @@ public class GameOverManager : MonoBehaviour
 
 
 
-        PlayerPrefs.DeleteAll();
+        // The run state lives only in the scene, so reloading it resets the run.
+        // PlayerPrefs is not cleared: it only holds player settings (audio), which must survive.
 
 
 

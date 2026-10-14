@@ -180,8 +180,11 @@ public class TrainMovement : MonoBehaviour
 
 
         float steer =
-            Input.GetAxis(
-                "Horizontal"
+            Mathf.Clamp(
+                Input.GetAxis("Horizontal") +
+                MobileInput.Steer,
+                -1f,
+                1f
             );
 
 
@@ -532,6 +535,30 @@ public class TrainMovement : MonoBehaviour
 
 
     }
+        // =====================
+    // BLOCK QUERIES (used by the upgrade UI)
+    // =====================
+
+    public int BlockCount => trainBlocks.Count;
+
+    // Number of attached blocks spawned from this prefab.
+    public int CountBlocks(GameObject blockPrefab)
+    {
+        if (blockPrefab == null)
+            return 0;
+
+        string cloneName = blockPrefab.name + "(Clone)";
+        int count = 0;
+
+        foreach (Transform block in trainBlocks)
+        {
+            if (block != null && block.name == cloneName)
+                count++;
+        }
+
+        return count;
+    }
+
     // =====================
     // REMOVE LAST BLOCK
     // =====================

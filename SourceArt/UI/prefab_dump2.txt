@@ -1,0 +1,61 @@
+##### Assets/Prefeb/Rocket.prefab
+Rocket lp(0.11, 0.00, 0.80) lr(0.00, 0.00, 0.00) ls(0.32, 0.26, 1.17) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Worm 1/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |RocketBullet{speed=15;lifeTime=5;useHoming=True;turnSpeed=8;damage=100;explosionRadius=10;explosionEffect=vfx_Explosion_01;}
+  vfx_Flamethrower_01 lp(-0.06, 0.00, -0.52) lr(0.00, 210.00, 0.00) ls(1.46, 1.75, 0.40) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+    Flames lp(0.00, 0.00, 0.00) lr(0.00, 350.23, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate100 life0.6 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+    Flare lp(0.00, 0.00, 0.00) lr(0.00, 350.23, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate7 life0.4 mat Flare00_AB_2) |ParticleSystemRenderer
+  Sphere lp(0.00, 0.00, 0.51) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 0.26) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |SphereCollider
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Electricity_01.prefab
+vfx_Electricity_01 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate100 life0.15 mat ParticlesUnlit) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Explosion_01.prefab
+vfx_Explosion_01 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(3.00, 3.00, 3.00) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+  Flash  lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  Particle System lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.04, 1.04, 1.04) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (2) lp(0.00, 0.35, 0.00) lr(0.00, 0.00, 0.00) ls(0.66, 0.66, 0.66) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (4) lp(0.00, 0.62, 0.00) lr(0.00, 0.00, 0.00) ls(0.52, 0.52, 0.52) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (1) lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.11, 1.11, 1.11) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (3) lp(0.00, 0.35, 0.00) lr(0.00, 0.00, 0.00) ls(0.71, 0.71, 0.71) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (5) lp(0.00, 0.62, 0.00) lr(0.00, 0.00, 0.00) ls(0.56, 0.56, 0.56) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Explosion_02.prefab
+vfx_Explosion_02 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate10 life1 mat -) |ParticleSystemRenderer
+  Flash lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.15 mat Flare00_AB_2) |ParticleSystemRenderer
+  Flares lp(0.00, 0.00, 0.00) lr(0.00, 270.00, 90.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.2 mat Flare00_AB_2) |ParticleSystemRenderer
+  Shockwave lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.10, 1.10, 1.10) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.3 mat Circle01_AB) |ParticleSystemRenderer
+  Shockwave (1) lp(0.00, 0.58, 0.00) lr(270.00, 0.00, 0.00) ls(0.75, 0.75, 0.75) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.3 mat Circle01_AB) |ParticleSystemRenderer
+  Shockwave (2) lp(0.00, 1.10, 0.00) lr(270.00, 0.00, 0.00) ls(0.50, 0.50, 0.50) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.3 mat Circle01_AB) |ParticleSystemRenderer
+  Particle System lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.10, 1.10, 1.10) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (1) lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.10, 1.10, 1.10) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (2) lp(0.00, 0.60, 0.00) lr(0.00, 0.00, 0.00) ls(0.75, 0.75, 0.75) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (3) lp(0.00, 0.60, 0.00) lr(0.00, 0.00, 0.00) ls(0.75, 0.75, 0.75) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (4) lp(0.00, 1.11, 0.00) lr(0.00, 0.00, 0.00) ls(0.50, 0.50, 0.50) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+  Particle System (5) lp(0.00, 1.11, 0.00) lr(0.00, 0.00, 0.00) ls(0.50, 0.50, 0.50) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1.5 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Impact_01.prefab
+vfx_Impact_01 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  Particles lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.8 mat Flare00_AB_2) |ParticleSystemRenderer
+  BrightHold lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.6 mat Flare00_AB_2) |ParticleSystemRenderer
+  Darkback lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.8 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Lightning_01.prefab
+vfx_Lightning_01 lp(0.00, 0.00, 0.00) lr(90.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate15 life0.16 mat ParticlesUnlit) |ParticleSystemRenderer
+  Particle System (1) lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life1 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Lightning_02.prefab
+vfx_Lightning_02 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+  Lightning lp(0.00, 0.00, 0.00) lr(90.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate10 life0.16 mat -) |ParticleSystemRenderer
+    Flash lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+    Particles lp(0.00, 0.00, 0.00) lr(0.00, 180.00, 180.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.8 mat Flare00_AB_2) |ParticleSystemRenderer
+  Flash lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate10 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  Particles lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate10 life0.8 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_MuzzleFlash_01.prefab
+vfx_MuzzleFlash_01 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+  Flash lp(0.00, 0.00, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  MuzzleH lp(0.00, 0.00, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  MuzzleV lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  Flares lp(0.00, 0.00, 0.00) lr(0.00, 270.00, 90.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_MuzzleFlash_02.prefab
+vfx_MuzzleFlash_02 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate10 life1 mat -) |ParticleSystemRenderer
+  Flash lp(0.00, 0.00, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+  MuzzleH lp(0.00, 0.00, -0.54) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flame02_AB_2) |ParticleSystemRenderer
+  MuzzleV lp(0.00, 0.00, -0.54) lr(0.00, 270.00, 90.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flame02_AB_2) |ParticleSystemRenderer
+  Flares lp(0.00, 0.00, 0.00) lr(0.00, 270.00, 90.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate0 life0.1 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Smoke_01.prefab
+vfx_Smoke_01 lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate50 life4 mat Flame02_AB) |ParticleSystemRenderer
+##### Assets/fx/FreeQuickEffectsVol1/Prefabs/vfx_Sparks_01.prefab
+vfx_Sparks_01 lp(0.00, 0.00, 0.00) lr(350.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate50 life8 mat Flame02_AB_2) |ParticleSystemRenderer

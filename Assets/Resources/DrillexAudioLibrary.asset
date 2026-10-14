@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a49a59cec9a1c4479e1eddab5229d79, type: 3}
+  m_Name: DrillexAudioLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::AudioLibrary
+  menuMusic: {fileID: 8300000, guid: 7c96a844928a01445a0e5faecfdd1fc8, type: 3}
+  gameplayMusic: {fileID: 8300000, guid: 19111ac127e5c6143b81d90b65b403d3, type: 3}
+  musicBaseVolume: 0.55
+  uiClick: {fileID: 8300000, guid: 15ff7e3c77bae6242bc3664f5535e908, type: 3}
+  uiOpen: {fileID: 8300000, guid: aec718c75a3a1ca49bba10481ea547d5, type: 3}
+  uiClose: {fileID: 8300000, guid: ff13f45dc188ec445bbbeb465d9641a9, type: 3}
+  purchase: {fileID: 8300000, guid: 6a3e00db3821d83409774b0b399c09f6, type: 3}
+  denied: {fileID: 8300000, guid: 9c2c12f10cd5d04418658ba3edef0779, type: 3}
+  unlock: {fileID: 8300000, guid: ba36c8a880f69934f8a8814cff0be788, type: 3}
+  levelUp: {fileID: 8300000, guid: cc2e7f3e9c3e08e49a7c8d7b9e611b91, type: 3}
+  orbPickup: {fileID: 8300000, guid: cdc14146e29c6424b923635063520f18, type: 3}
+  orbDeposit: {fileID: 8300000, guid: 4db85a7dbaaca134d8d6fe468a547624, type: 3}
+  warning: {fileID: 8300000, guid: e3aa4ba83f33c374ab4e30548109dd22, type: 3}
+  basicShot: {fileID: 8300000, guid: e45b5224d35243d429d9e3f04afe0c0e, type: 3}
+  doubleShot: {fileID: 8300000, guid: 539c241bc6228294c964497965e2bb08, type: 3}
+  machineGunShot: {fileID: 8300000, guid: c1908349d8e70e843b538ca1fbbfac0e, type: 3}
+  rocketLaunch: {fileID: 8300000, guid: 590a01cecd3b257419f868b64effae04, type: 3}
+  explosion: {fileID: 8300000, guid: f6c8fe1e27ecd754ea34b43ed2529dbf, type: 3}
+  electricShot: {fileID: 8300000, guid: 20b437990dbcd5e4c91fec175009f63d, type: 3}
+  electricImpact: {fileID: 8300000, guid: 29c1f84ed9a77314a98b62b873dc7379, type: 3}
+  bulletImpact: {fileID: 8300000, guid: e43ab31d2584b4640bf2a11d4705ae92, type: 3}
+  flameLoop: {fileID: 8300000, guid: cb54258395cc43142b2bf6513a718bc1, type: 3}
+  trapDeploy: {fileID: 8300000, guid: 429a481dca75ec94e9b53297b0d9f1eb, type: 3}

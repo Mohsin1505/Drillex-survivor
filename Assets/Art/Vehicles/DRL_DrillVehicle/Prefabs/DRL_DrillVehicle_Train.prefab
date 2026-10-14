@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4418630861718035026, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
+      propertyPath: shotSound
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418630861718035026, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
+      propertyPath: muzzleFlashPrefab
+      value: 
+      objectReference: {fileID: 8205105203264893380, guid: 21d4aac126940ed40ad3e876db2db0ac, type: 3}
     - target: {fileID: 5439333460047114006, guid: 3b0591fd3f8641c41a3fc6506d4070f7, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 0
@@ -286,6 +294,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4361742111309761950, guid: af3b8c17978bd23448d9660ff845571d, type: 3}
   shootPoint: {fileID: 7734264615881853261}
   fireRate: 1
+  muzzleFlashPrefab: {fileID: 8205105203264893380, guid: 21d4aac126940ed40ad3e876db2db0ac, type: 3}
+  shotSound: 1
+  shotVolume: 0.7
 --- !u!4 &4230571422973417265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4695495580821267002, guid: 69ace9e881d8610419af487961c01d26, type: 3}

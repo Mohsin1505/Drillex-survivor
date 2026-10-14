@@ -1,0 +1,66 @@
+=== Assets/Scenes/MainMenu.unity
+BTN Canvas/Panel/Play -> GameObject.StartGame 
+BTN Canvas/Panel/hELP -> GameObject.OpenHelp 
+BTN Canvas/Help/Button -> GameObject.CloseHelp 
+GameObject |SceneLoader{}
+GameObject |HelpPanelManager{helpPanel=Help;}
+=== Assets/Scenes/Lev1.unity
+Main Camera |CameraMovement{target=Socket_CameraTarget;distance=10;mouseSensitivity=3;minY=5;maxY=70;smoothSpeed=10;startPitch=24;}
+Canvas |WormWarningUI{canvasGroup=Warning ;blinkSpeed=0.5;}
+Canvas/Upgrade Pannel |UpgradeUI{basicDamageText=Text (TMP);machineDamageText=Text (TMP);rocketDamageText=Text (TMP);fireRateText=null;speedText=Text (TMP);healthText=Text (TMP);}
+BTN Canvas/Upgrade Pannel/Bullet Damage -> Upgrademanager.UpgradeBasicGunDamage 
+Canvas/Upgrade Pannel/Bullet Damage |UpgradeButtonUI{unlockLevel=2;lockPanel=lock;lockText=Text (TMP);button=Bullet Damage;}
+BTN Canvas/Upgrade Pannel/Machine gun bullet -> Upgrademanager.UpgradeMachineGunDamage 
+Canvas/Upgrade Pannel/Machine gun bullet |UpgradeButtonUI{unlockLevel=9;lockPanel=lock;lockText=Text (TMP);button=Machine gun bullet;}
+BTN Canvas/Upgrade Pannel/repair -> Upgrademanager.RepairTrain 
+Canvas/Upgrade Pannel/repair |UpgradeButtonUI{unlockLevel=1;lockPanel=lock;lockText=Text (TMP);button=repair;}
+BTN Canvas/Upgrade Pannel/rocket damage -> Upgrademanager.UpgradeRocketDamage 
+Canvas/Upgrade Pannel/rocket damage |UpgradeButtonUI{unlockLevel=13;lockPanel=lock;lockText=Text (TMP);button=rocket damage;}
+BTN Canvas/Upgrade Pannel/Train Speed -> Upgrademanager.UpgradeTrainSpeed 
+Canvas/Upgrade Pannel/Train Speed |UpgradeButtonUI{unlockLevel=3;lockPanel=lock;lockText=Text (TMP);button=Train Speed;}
+BTN Canvas/Upgrade Pannel/Health -> Upgrademanager.UpgradeHealth 
+Canvas/Upgrade Pannel/Health |UpgradeButtonUI{unlockLevel=3;lockPanel=lock;lockText=Text (TMP);button=Health;}
+BTN Canvas/Upgrade Pannel/Storage -> Upgrademanager.BuyStorageBlock 
+Canvas/Upgrade Pannel/Storage |UpgradeButtonUI{unlockLevel=3;lockPanel=lock;lockText=Text (TMP);button=Storage;}
+BTN Canvas/Upgrade Pannel/Basic  -> Upgrademanager.BuyBasicGun 
+Canvas/Upgrade Pannel/Basic  |UpgradeButtonUI{unlockLevel=4;lockPanel=lock;lockText=Text (TMP);button=Basic ;}
+BTN Canvas/Upgrade Pannel/double gun -> Upgrademanager.BuyDualGun 
+Canvas/Upgrade Pannel/double gun |UpgradeButtonUI{unlockLevel=6;lockPanel=lock;lockText=Text (TMP);button=double gun;}
+BTN Canvas/Upgrade Pannel/machinegun -> Upgrademanager.BuyMachineGun 
+Canvas/Upgrade Pannel/machinegun |UpgradeButtonUI{unlockLevel=8;lockPanel=lock;lockText=Text (TMP);button=machinegun;}
+BTN Canvas/Upgrade Pannel/Rocket Launcher -> Upgrademanager.BuyRocketGun 
+Canvas/Upgrade Pannel/Rocket Launcher |UpgradeButtonUI{unlockLevel=12;lockPanel=lock;lockText=Text (TMP);button=Rocket Launcher;}
+BTN Canvas/Upgrade Pannel/Flamethrower -> Upgrademanager.BuyFlameThrower 
+Canvas/Upgrade Pannel/Flamethrower |UpgradeButtonUI{unlockLevel=10;lockPanel=lock;lockText=Text (TMP);button=Flamethrower;}
+BTN Canvas/Upgrade Pannel/remove the block -> Upgrademanager.RemoveLastBlock 
+Canvas/Upgrade Pannel/remove the block |UpgradeButtonUI{unlockLevel=1;lockPanel=lock;lockText=Text (TMP);button=remove the block;}
+BTN Canvas/Upgrade Pannel/Button -> Safezone.CloseUpgrade 
+BTN Canvas/Upgrade Button -> Safezone.OpenUpgrade 
+BTN Canvas/trap -> trapdeployer.DeployTrap 
+Canvas/GameOver |GameOverButtons{train=DRL_DrillVehicle_Train;safeZone=Safezone (1);}
+BTN Canvas/GameOver/Repair -> GameOver.RepairTrain 
+BTN Canvas/GameOver/abondond -> GameOver.AbandonRun 
+BTN Canvas/Button -> PauseManager.PauseGame 
+BTN Canvas/pause/Button -> PauseManager.MainMenu 
+BTN Canvas/pause/Button (1) -> PauseManager.ResumeGame 
+manager |Manager{permanentOrb=50000000;permanentOrbText=Storage;noiseSlider=Noise Meter;maxNoise=50;currentNoise=0;drainSpeed=15;refillSpeed=0.5;wormPrefab=Worm;player=DRL_DrillVehicle_Train;wormHome=Worm house;currentWorm=null;minSpawnDistance=100;maxSpawnDistance=250;wormWarningPanel=Warning ;}
+manager/Upgrademanager |UpgradeManager{basicGunBonus=5;machineGunBonus=3;rocketGunBonus=20;maxUpgradeLevel=4;basicDamageLevel=0;machineDamageLevel=0;rocketDamageLevel=0;fireRateLevel=0;speedLevel=0;healthLevel=0;storageBlockPrefab=Storage;basicGunPrefab=Basic Gun;dualGunPrefab=Double  barrel gun;machineGunPrefab=mini machine gun;rocketGunPrefab=rocket launcher;flameThrowerPrefab=FlameThrower;basicGunUpgradeCost=50;machineGunUpgradeCost=150;rocketUpgradeCost=500;fireRateCost=0;speedCost=200;healthCost=100;repairCost=50;repairAmount=50;storageBlockCost=250;basicGunCost=350;dualGunCost=500;machineGunCost=1000;rocketGunCost=2000;flameThrowerCost=1500;basicDamageUnlockLevel=2;machineDamageUnlockLevel=9;rocketDamageUnlockLevel=13;fireRateUnlockLevel=0;speedUnlockLevel=3;healthUnlockLevel=3;storageUnlockLevel=3;basicGunUnlockLevel=4;dualGunUnlockLevel=6;flameThrowerUnlockLevel=10;machineGunUnlockLevel=8;rocketGunUnlockLevel=12;basicDamageIncrease=5;machineDamageIncrease=2;rocketDamageIncrease=50;fireRateDecrease=0.1;speedIncrease=1;healthIncrease=100;}
+manager/exmanager |ExperienceManager{currentLevel=50;currentXP=0;xpNeeded=150;xpSlider=Slider;levelText=Lev ex;xpText=ex;}
+Safezone |SafeZone{}
+Safezone |UpgradeStation{upgradeButton=Upgrade Button;upgradePanel=Upgrade Pannel;}
+Spawner |EnemySpawner{train=DRL_DrillVehicle_Train;minDistanceFromTrain=35;maxDistanceFromTrain=60;enemyDespawnDistance=120;enemyHeightOffset=1.3;rockHeightOffset=-0.3;rayHeight=50;}
+DRL_DrillVehicle_Train |TrainHealth{maxHealth=100;healthSlider=Slider;gameOverPanel=GameOver;}
+DRL_DrillVehicle_Train |TrainMovement{normalSpeed=5;drillingSpeed=2;currentSpeed=0;steerSpeed=180;blockDistance=2;}
+DRL_DrillVehicle_Train |TrainStorageManager{baseStorage=300;totalStorage=0;currentOrb=0;storageText=Score;}
+DRL_DrillVehicle_Train/Canvas |BillboardUI{}
+DRL_DrillVehicle_Train/Drill |Drill{drillDamage=3;damageRate=0.2;trainMovement=DRL_DrillVehicle_Train;}
+DRL_DrillVehicle_Train/Drill |TrainDamagePoint{}
+DRL_DrillVehicle_Train/Drill/gun |AutoGun{baseDamage=10;range=30;enemyTag='Enemy';rotationSpeed=8;bulletPrefab=Machinebullet;shootPoint=shootingpoint;fireRate=1;}
+DRL_DrillVehicle_Train/trapdeployer |TrapDeployer{trapPrefab=Sound Trap;dropPoint=trapdeployer;cooldown=10;cooldownSlider=Slider;}
+DRL_DrillVehicle_Train/Visual |DrillVehicleAnimator{trainMovement=null;drillSocket=DrillSocket;idleDrillSpeed=180;drillingDrillSpeed=900;spinBlend=6;wheelRadius=0.17;maxWheelDegreesPerFrame=20;}
+DRL_DrillVehicle_Train/Visual/DrillMount/DrillSocket/DRL_Drill_Standard |Drill{drillDamage=10;damageRate=0.2;trainMovement=DRL_DrillVehicle_Train;}
+DRL_DrillVehicle_Train/Visual/DrillMount/DrillSocket/DRL_Drill_Standard |TrainDamagePoint{}
+DRL_DrillVehicle_Train/Visual/Turret |AutoGun{baseDamage=10;range=30;enemyTag='Enemy';rotationSpeed=8;bulletPrefab=Machinebullet;shootPoint=VFX_CannonMuzzle;fireRate=1;}
+DRL_DrillVehicle_Train/HullCollider |TrainDamagePoint{}
+compass |SafeZoneCompass{safeZone=Safezone;playerCamera=Main Camera;arrow=Arrow;distanceText=distance texty;}
+PauseManager |PauseManager{pausePanel=pause;}

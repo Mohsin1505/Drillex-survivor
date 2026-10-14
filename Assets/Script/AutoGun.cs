@@ -10,9 +10,10 @@ public class AutoGun : MonoBehaviour
 
     public enum WeaponType
     {
-        Basic,
+                Basic,
         MachineGun,
-        Rocket
+        Rocket,
+        Electric
     }
 
 
@@ -88,6 +89,34 @@ public class AutoGun : MonoBehaviour
 
 
 
+        // =========================
+    // EFFECTS (visual / audio only)
+    // =========================
+
+    public enum ShotSound
+    {
+        Auto,
+        Basic,
+        Double,
+        MachineGun,
+        Rocket,
+        Electric,
+        None
+    }
+
+    [Header("Effects")]
+    [Tooltip("Spawned once under the shoot point and replayed on every shot.")]
+    public GameObject muzzleFlashPrefab;
+
+    public ShotSound shotSound = ShotSound.Auto;
+
+    [Range(0f, 1f)]
+    public float shotVolume = 0.7f;
+
+    private ParticleSystem muzzleFlash;
+
+    private LightningBurst muzzleArcs;
+
     private float fireTimer;
 
 
@@ -100,6 +129,63 @@ public class AutoGun : MonoBehaviour
 
 
 
+
+        void Start()
+    {
+        if (muzzleFlashPrefab != null && shootPoint != null)
+        {
+            GameObject fx =
+            Instantiate(
+                muzzleFlashPrefab,
+                shootPoint
+            );
+
+            fx.transform.localPosition = Vector3.zero;
+            fx.transform.localRotation = Quaternion.identity;
+
+            muzzleFlash = fx.GetComponent<ParticleSystem>();
+            muzzleArcs = fx.GetComponentInChildren<LightningBurst>(true);
+
+            if (muzzleArcs != null)
+                muzzleArcs.enabled = false;
+        }
+    }
+
+    void PlayShotEffects()
+    {
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            muzzleFlash.Play(true);
+        }
+
+        if (muzzleArcs != null)
+        {
+            muzzleArcs.enabled = false;
+            muzzleArcs.enabled = true;
+        }
+
+        ShotSound s = shotSound;
+
+        if (s == ShotSound.Auto)
+        {
+            if (weaponType == WeaponType.MachineGun) s = ShotSound.MachineGun;
+            else if (weaponType == WeaponType.Rocket) s = ShotSound.Rocket;
+            else if (weaponType == WeaponType.Electric) s = ShotSound.Electric;
+            else s = ShotSound.Basic;
+        }
+
+        Vector3 pos = shootPoint.position;
+
+        switch (s)
+        {
+            case ShotSound.Basic: AudioManager.Sfx(l => l.basicShot, shotVolume, pos, 0.05f); break;
+            case ShotSound.Double: AudioManager.Sfx(l => l.doubleShot, shotVolume, pos, 0.05f); break;
+            case ShotSound.MachineGun: AudioManager.Sfx(l => l.machineGunShot, shotVolume, pos, 0.07f, 0.08f); break;
+            case ShotSound.Rocket: AudioManager.Sfx(l => l.rocketLaunch, shotVolume, pos, 0.1f); break;
+            case ShotSound.Electric: AudioManager.Sfx(l => l.electricShot, shotVolume, pos, 0.05f); break;
+        }
+    }
 
     void Update()
     {
@@ -279,12 +365,23 @@ public class AutoGun : MonoBehaviour
 
 
 
+                // plain bullets are pooled (machine gun fires 10 per second); rockets are rare and instantiated
         GameObject bullet =
+        bulletPrefab.GetComponent<Bullet>() != null
+        ?
+        PrefabPool.Spawn(
+            bulletPrefab,
+            shootPoint.position,
+            shootPoint.rotation
+        )
+        :
         Instantiate(
             bulletPrefab,
             shootPoint.position,
             shootPoint.rotation
         );
+
+        PlayShotEffects();
 
 
 
@@ -347,17 +444,26 @@ public class AutoGun : MonoBehaviour
 
 
 
-            if (
+                        if (
                 weaponType ==
                 WeaponType.Rocket
             )
             {
-
                 finalDamage +=
                 UpgradeManager
                 .instance
                 .rocketGunBonus;
+            }
 
+            if (
+                weaponType ==
+                WeaponType.Electric
+            )
+            {
+                finalDamage +=
+                UpgradeManager
+                .instance
+                .electricGunBonus;
             }
 
 

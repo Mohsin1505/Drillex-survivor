@@ -29,3 +29,6 @@ sysinfo.txt
 # Blender backups
 *.blend1
 *.blend2
+
+# UI work: generated previews / screenshots
+SourceArt/UI/_preview/

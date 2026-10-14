@@ -57,14 +57,46 @@ public class RocketBullet : MonoBehaviour
 
 
 
+        private float life;
+
+    private bool finished;
+
     void Start()
     {
+        life =
+            lifeTime;
+    }
 
-        Destroy(
-            gameObject,
-            lifeTime
-        );
+    // Exhaust particles and trails are unparented when the rocket ends so the smoke
+    // finishes fading where it was instead of vanishing or hanging off a deleted object.
+    void ReleaseTrails()
+    {
+        foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+        {
+            if (ps.transform.parent != transform)
+                continue;
 
+            ps.transform.SetParent(null, true);
+            ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            Destroy(ps.gameObject, ps.main.startLifetime.constantMax + 0.5f);
+        }
+
+        foreach (TrailRenderer tr in GetComponentsInChildren<TrailRenderer>())
+        {
+            tr.transform.SetParent(null, true);
+            tr.emitting = false;
+            Destroy(tr.gameObject, tr.time + 0.1f);
+        }
+    }
+
+    void Expire()
+    {
+        if (finished)
+            return;
+
+        finished = true;
+        ReleaseTrails();
+        Destroy(gameObject);
     }
 
 
@@ -75,8 +107,17 @@ public class RocketBullet : MonoBehaviour
 
 
 
-    void Update()
+        void Update()
     {
+        life -=
+            Time.deltaTime;
+
+        if (life <= 0)
+        {
+            Expire();
+            return;
+        }
+
 
 
         if (
@@ -182,21 +223,36 @@ public class RocketBullet : MonoBehaviour
 
 
 
-    void Explode()
+        void Explode()
     {
+        // Damage below runs on every call exactly as before (a rocket touching two enemy
+        // colliders in one physics step still explodes twice); only the visuals/audio play once.
+        bool firstExplosion = !finished;
 
+        finished = true;
 
-
-        if (explosionEffect != null)
+        if (firstExplosion && explosionEffect != null)
         {
-
-            Instantiate(
-                explosionEffect,
-                transform.position,
-                Quaternion.identity
-            );
-
+            if (explosionEffect.GetComponent<PooledVfx>() != null)
+            {
+                PooledVfx.Play(
+                    explosionEffect,
+                    transform.position,
+                    Quaternion.identity
+                );
+            }
+            else
+            {
+                Instantiate(
+                    explosionEffect,
+                    transform.position,
+                    Quaternion.identity
+                );
+            }
         }
+
+        if (firstExplosion)
+            AudioManager.Sfx(l => l.explosion, 1f, transform.position, 0.05f);
 
 
 
@@ -303,19 +359,12 @@ public class RocketBullet : MonoBehaviour
 
 
 
+                ReleaseTrails();
+
         Destroy(
             gameObject
         );
-
     }
-
-
-
-
-
-
-
-
 
     private void OnDrawGizmosSelected()
     {

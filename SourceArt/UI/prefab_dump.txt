@@ -1,0 +1,234 @@
+##### Assets/Prefeb/Basic Gun.prefab
+Basic Gun lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  gun lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |AutoGun{weaponType=Basic;baseDamage=10;range=30;rotationSpeed=7;bulletPrefab=basicbulle;shootPoint=shootingpoint;fireRate=1;}
+    gun lp(0.03, -0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.20, -0.66, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Gun/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  Point Light lp(0.09, 1.53, 0.44) lr(0.00, 350.91, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |Light(Point 10) |UniversalAdditionalLightData{m_UsePipelineSettings=True;m_AdditionalLightsShadowResolutionTier=2;m_CustomShadowLayers=False;m_SoftShadowQuality=Use settings from Render Pipeline Asset;m_Version=Rendering Layers Mask;m_LightLayerMask=Light Layer Default;m_ShadowLayerMask=Light Layer Default;m_RenderingLayers=1;m_ShadowRenderingLayers=1;}
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.06) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit) |AutoGun{weaponType=Basic;baseDamage=10;range=30;rotationSpeed=7;bulletPrefab=basicbulle;shootPoint=VFX_Muzzle;fireRate=1;}
+      Cannon lp(0.00, 0.24, 0.34) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GunCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle lp(0.00, 0.00, 0.94) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/basicbulle.prefab
+basicbulle lp(0.02, 0.00, 0.16) lr(0.00, 0.00, 0.00) ls(0.15, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(bullet/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |Bullet{speed=120;lifeTime=0.7;damage=10;useHoming=True;turnSpeed=0.5;}
+##### Assets/Prefeb/Double  barrel gun.prefab
+Double  barrel gun lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  gun lp(0.33, 0.65, -0.45) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |AutoGun{weaponType=Basic;baseDamage=7;range=30;rotationSpeed=6;bulletPrefab=basicbulle;shootPoint=shootingpoint;fireRate=1;}
+    gun lp(0.02, -0.02, 0.33) lr(270.56, 180.00, 180.00) ls(0.20, -0.40, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Gun/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  gun (1) lp(-0.28, 0.65, -0.42) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |AutoGun{weaponType=Basic;baseDamage=7;range=30;rotationSpeed=6;bulletPrefab=basicbulle;shootPoint=shootingpoint;fireRate=1;}
+    gun lp(0.02, -0.02, 0.32) lr(270.56, 180.00, 180.00) ls(0.20, -0.38, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Gun/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.08) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit) |AutoGun{weaponType=Basic;baseDamage=7;range=30;rotationSpeed=6;bulletPrefab=basicbulle;shootPoint=VFX_Muzzle_L;fireRate=1;} |AutoGun{weaponType=Basic;baseDamage=7;range=30;rotationSpeed=6;bulletPrefab=basicbulle;shootPoint=VFX_Muzzle_R;fireRate=1;}
+      Cannon_L lp(-0.16, 0.18, 0.33) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle_L lp(0.00, 0.00, 0.92) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+      Cannon_R lp(0.16, 0.18, 0.33) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_DoubleGunCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle_R lp(0.00, 0.00, 0.92) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/Drill.prefab
+Drill lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |MeshFilter |MeshRenderer(Head/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |Drill{drillDamage=0.01;damageRate=0.2;trainMovement=null;} |TrainDamagePoint{}
+  gun lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 0.50) [off] layer=Default tag=Untagged |AutoGun{weaponType=Basic;baseDamage=10;range=30;rotationSpeed=8;bulletPrefab=Machinebullet;shootPoint=shootingpoint;fireRate=1;}
+    gun lp(0.03, -0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.20, -0.66, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/FlameThrower.prefab
+FlameThrower lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  pivot lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |FlameThrower{range=10;rotationSpeed=8;damagePerSecond=20;flameAngle=35;flameEffect=vfx_Flamethrower_01;}
+    gunbarrel lp(0.03, 0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.27, -0.63, 0.27) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Head/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |FlameThrower{range=10;rotationSpeed=8;damagePerSecond=20;flameAngle=35;flameEffect=vfx_Flamethrower_01;}
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit) |FlameThrower{range=10;rotationSpeed=8;damagePerSecond=20;flameAngle=35;flameEffect=vfx_Flamethrower_01;}
+      Cannon lp(0.00, 0.27, 0.23) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_FlameCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle lp(0.00, 0.00, 0.79) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |FlameThrower{range=10;rotationSpeed=8;damagePerSecond=20;flameAngle=35;flameEffect=vfx_Flamethrower_01;}
+          vfx_Flamethrower_01 lp(0.00, 0.00, 0.00) lr(0.00, 354.24, 0.00) ls(1.42, 1.42, 1.79) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+            Flames lp(0.00, 0.00, 0.00) lr(0.00, 350.23, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate100 life0.6 mat DistortedFlare01_AB_2) |ParticleSystemRenderer
+            Flare lp(0.00, 0.00, 0.00) lr(0.00, 350.23, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate7 life0.4 mat Flare00_AB_2) |ParticleSystemRenderer
+##### Assets/Prefeb/GameObject.prefab
+GameObject lp(2.93, -0.97, -262.06) lr(0.00, 156.57, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Enemy |SmallWorm{maxHealth=50;healthSlider=Slider;xpReward=10;knockbackForce=3;knockbackTime=0.1;soundTrapDetectionRange=60;moveSpeed=5.5;rotationSpeed=5;detectionRange=50;loseInterestRange=55;idleSpeed=2;changeDirectionTime=3;damage=10;attackRate=1;attackDistance=3;trainAttackRange=3;}
+  lightMoster lp(0.00, 0.97, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Enemy |MeshFilter |MeshRenderer(Worm/Universal Render Pipeline/Lit) |Rigidbody |BoxCollider
+    Cube lp(0.43, -0.42, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+    Cube (2) lp(-0.51, -0.50, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+    Cube (1) lp(0.43, 0.58, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+    Cube (3) lp(-0.51, 0.51, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+    Healthbar holder lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+      Canvas lp(0.50, 1.28, -0.47) lr(0.00, 0.00, 0.00) ls(0.00, 0.00, 0.00) layer=Default tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+        Slider lp(-248.00, -71.00, 197.00) lr(0.00, 0.00, 0.00) ls(6.81, 11.59, 6.81) layer=Default tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=100;m_WholeNumbers=False;m_Value=100;}
+          Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+          Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+            Fill lp(-64.92, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+          Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+            Handle lp(-70.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+##### Assets/Prefeb/Head (1).prefab
+Head (1) lp(24.41, 0.57, -30.25) lr(0.00, 175.89, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |TrainDamagePoint{}
+  Cube lp(-0.01, 0.61, -0.47) lr(0.00, 0.00, 0.00) ls(0.55, 0.26, 0.06) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |BoxCollider
+  gunpivot lp(0.00, 0.79, -0.46) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    gun lp(0.00, -0.01, -0.20) lr(0.00, 0.00, 0.00) ls(0.09, 0.09, 0.46) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |BoxCollider
+##### Assets/Prefeb/Head.prefab
+Head lp(0.00, 0.62, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 3.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Head/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |SnakeMovement{MoveSpeed=5;SteerSpeed=180;BodySpeed=5;Gap=10;BodyPrefab=null;}
+##### Assets/Prefeb/HeavyMoster.prefab
+HeavyMoster lp(-119.28, 0.78, 41.12) lr(0.00, 156.57, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Enemy |MeshFilter |MeshRenderer(Worm 2/Universal Render Pipeline/Lit) |CapsuleCollider |SmallWorm{maxHealth=300;healthSlider=Slider;xpReward=100;knockbackForce=0;knockbackTime=0;soundTrapDetectionRange=35;moveSpeed=10;rotationSpeed=5;detectionRange=50;loseInterestRange=55;idleSpeed=2;changeDirectionTime=3;damage=50;attackRate=0.5;attackDistance=3;trainAttackRange=3;} |Rigidbody
+  Cube lp(0.43, -0.42, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (2) lp(-0.51, -0.50, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (1) lp(0.43, 0.58, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (3) lp(-0.51, 0.51, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Healthbar holder lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Canvas lp(0.50, 1.28, -0.47) lr(0.00, 0.00, 0.00) ls(0.00, 0.00, 0.00) layer=Default tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+      Slider lp(-248.00, -71.00, 197.00) lr(0.00, 0.00, 0.00) ls(6.81, 11.59, 6.81) layer=Default tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=100;m_WholeNumbers=False;m_Value=100;}
+        Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Fill lp(-64.92, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Handle lp(-70.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+##### Assets/Prefeb/lightMoster.prefab
+lightMoster lp(-119.28, 0.78, 41.12) lr(0.00, 156.57, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Enemy |MeshFilter |MeshRenderer(Gun/Universal Render Pipeline/Lit) |SmallWorm{maxHealth=100;healthSlider=Slider;xpReward=20;knockbackForce=3;knockbackTime=0.1;soundTrapDetectionRange=35;moveSpeed=6;rotationSpeed=5;detectionRange=35;loseInterestRange=40;idleSpeed=2;changeDirectionTime=3;damage=10;attackRate=1;attackDistance=1;trainAttackRange=3;} |Rigidbody |BoxCollider
+  Cube lp(0.43, -0.42, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (2) lp(-0.51, -0.50, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (1) lp(0.43, 0.58, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (3) lp(-0.51, 0.51, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Healthbar holder lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Canvas lp(0.50, 1.28, -0.47) lr(0.00, 0.00, 0.00) ls(0.00, 0.00, 0.00) layer=Default tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+      Slider lp(-248.00, -71.00, 197.00) lr(0.00, 0.00, 0.00) ls(6.81, 11.59, 6.81) layer=Default tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=100;m_WholeNumbers=False;m_Value=100;}
+        Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Fill lp(-64.92, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Handle lp(-70.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+##### Assets/Prefeb/Machinebullet.prefab
+Machinebullet lp(0.20, 0.00, 0.16) lr(0.00, 0.00, 0.00) ls(0.28, 0.08, 0.08) layer=Default tag=Untagged |MeshFilter |MeshRenderer(bullet/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |Bullet{speed=50;lifeTime=1;damage=5;useHoming=False;turnSpeed=0;}
+##### Assets/Prefeb/MediumMoster.prefab
+MediumMoster lp(-119.28, 0.78, 41.12) lr(0.00, 156.57, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Enemy |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |CapsuleCollider |SmallWorm{maxHealth=200;healthSlider=Slider;xpReward=50;knockbackForce=3;knockbackTime=0.1;soundTrapDetectionRange=35;moveSpeed=7;rotationSpeed=5;detectionRange=50;loseInterestRange=55;idleSpeed=2;changeDirectionTime=3;damage=25;attackRate=0.8;attackDistance=3;trainAttackRange=3;} |Rigidbody
+  Cube lp(0.43, -0.42, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (2) lp(-0.51, -0.50, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (1) lp(0.43, 0.58, -0.17) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Cube (3) lp(-0.51, 0.51, -0.23) lr(0.00, 0.00, 0.00) ls(0.51, 0.15, 0.15) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |BoxCollider
+  Healthbar holder lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Canvas lp(0.50, 1.28, -0.47) lr(0.00, 0.00, 0.00) ls(0.00, 0.00, 0.00) layer=Default tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+      Slider lp(-248.00, -71.00, 197.00) lr(0.00, 0.00, 0.00) ls(6.81, 11.59, 6.81) layer=Default tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=100;m_WholeNumbers=False;m_Value=100;}
+        Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Fill lp(-64.92, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Handle lp(-70.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+##### Assets/Prefeb/mini machine gun.prefab
+mini machine gun lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  gun lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |AutoGun{weaponType=Machine Gun;baseDamage=4;range=20;rotationSpeed=10;bulletPrefab=Machinebullet;shootPoint=shootingpoint;fireRate=0.1;}
+    gun lp(0.03, 0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.27, -0.63, 0.27) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Body/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.08) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit) |AutoGun{weaponType=Machine Gun;baseDamage=4;range=20;rotationSpeed=10;bulletPrefab=Machinebullet;shootPoint=VFX_Muzzle;fireRate=0.1;}
+      Cannon lp(0.00, 0.34, 0.34) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_GatlingCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle lp(0.00, 0.00, 0.91) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/rocket launcher.prefab
+rocket launcher lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  gun lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 1.00) [off] layer=Default tag=Untagged |AutoGun{weaponType=Rocket;baseDamage=70;range=50;rotationSpeed=10;bulletPrefab=Rocket;shootPoint=shootingpoint;fireRate=4;}
+    gun lp(0.03, -0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.20, -0.66, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Worm/Universal Render Pipeline/Lit) |CapsuleCollider
+      shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit) |AutoGun{weaponType=Rocket;baseDamage=70;range=50;rotationSpeed=10;bulletPrefab=Rocket;shootPoint=VFX_Muzzle;fireRate=4;}
+      Cannon lp(0.00, 0.30, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+        Rocket_1 lp(-0.09, 0.11, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+        Rocket_2 lp(0.10, 0.11, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+        Rocket_3 lp(-0.09, -0.09, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+        Rocket_4 lp(0.10, -0.09, 0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_RocketCar/Universal Render Pipeline/Lit)
+        VFX_Muzzle lp(0.00, 0.00, 0.94) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Tube_1 lp(-0.09, 0.11, 0.69) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Tube_2 lp(0.10, 0.11, 0.69) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Tube_3 lp(-0.09, -0.09, 0.69) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Tube_4 lp(0.10, -0.09, 0.69) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/Sound Trap.prefab
+Sound Trap lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  Soundtrap lp(0.00, 0.38, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |SphereCollider |SoundTrap{maxHealth=100;lifeTime=10;}
+    vfx_Projectile_01 lp(-0.02, 0.13, 0.02) lr(0.00, 0.00, 0.00) ls(8.83, 8.83, 8.83) layer=Default tag=Untagged |ParticleSystemRenderer |ParticleSystem(max1000 rate10 life1 mat -)
+      Particle System lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate2 life0.5 mat Flare00_AB_2) |ParticleSystemRenderer
+      Particle System (1) lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |ParticleSystem(max1000 rate50 life0.4 mat Flare00_AB_2) |ParticleSystemRenderer
+      Trail lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |TrailRenderer(0.4 DistortedFlare01_AB)
+##### Assets/Prefeb/Storage.prefab
+Storage lp(24.41, 0.57, -30.25) lr(0.00, 175.89, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |BoxCollider |Rigidbody |TrainDamagePoint{} |StorageBlock{storageAmount=400;} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_StorageBlock/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_StorageBlock/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_StorageBlock/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_StorageBlock/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_StorageBlock/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/Tesla Cannon.prefab
+Tesla Cannon lp(0.00, -0.07, 0.12) lr(0.00, 9.09, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |BoxCollider |Rigidbody |TrainDamagePoint{} |TrainWheelRoller{wheels=[Axle_1,Axle_2,Axle_3,Axle_4,];wheelRadius=0.17;maxDegreesPerFrame=20;}
+  Visual lp(0.00, -0.57, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Axle_1 lp(0.00, 0.17, 0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+    Axle_2 lp(0.00, 0.17, 0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+    Axle_3 lp(0.00, 0.17, -0.30) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+    Axle_4 lp(0.00, 0.17, -0.66) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+    Body lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+    Coupler_Front lp(0.00, 0.27, 1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Coupler_Rear lp(0.00, 0.27, -1.02) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+    Turret lp(0.00, 0.95, -0.10) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit) |AutoGun{weaponType=Basic;baseDamage=10;range=30;rotationSpeed=7;bulletPrefab=basicbulle;shootPoint=VFX_Muzzle;fireRate=1;}
+      Cannon lp(0.00, 0.27, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |MeshFilter |MeshRenderer(M_DRL_TeslaCar/Universal Render Pipeline/Lit)
+        VFX_Arc_1 lp(-0.08, 0.08, 1.04) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Arc_2 lp(0.08, 0.08, 1.04) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Arc_3 lp(0.08, -0.08, 1.04) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Arc_4 lp(-0.08, -0.08, 1.04) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Arc_Top_L lp(-0.10, 0.24, -0.12) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Arc_Top_R lp(0.10, 0.24, -0.12) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+        VFX_Muzzle lp(0.00, 0.00, 1.05) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+##### Assets/Prefeb/Train.prefab
+Train lp(0.00, 0.57, -272.60) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |TrainHealth{maxHealth=100;healthSlider=Slider;gameOverPanel=null;} |TrainMovement{normalSpeed=5;drillingSpeed=1.5;currentSpeed=0;steerSpeed=180;startingBlocks=[];blockDistance=2;} |TrainStorageManager{baseStorage=100;totalStorage=0;currentOrb=0;storageText=null;}
+  Canvas lp(-0.48, 1.18, -0.11) lr(357.19, 13.30, 0.04) ls(0.00, 0.00, 0.00) layer=UI tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+    Slider lp(306.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(5.00, 5.00, 5.00) layer=UI tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=1;m_WholeNumbers=False;m_Value=1;}
+      Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=UI tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+      Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=UI tag=Untagged
+        Fill lp(-135.03, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=UI tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+      Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=UI tag=Untagged
+        Handle lp(-140.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=UI tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+  Drill lp(0.00, -0.07, 0.12) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Drill |MeshFilter |MeshRenderer(Head/Universal Render Pipeline/Lit) |BoxCollider |Rigidbody |Drill{drillDamage=1;damageRate=0.5;trainMovement=Train;} |TrainDamagePoint{}
+    gun lp(0.05, 0.65, -0.44) lr(0.00, 5.76, 0.00) ls(1.00, 1.00, 0.50) layer=Default tag=Untagged |AutoGun{weaponType=Basic;baseDamage=10;range=30;rotationSpeed=8;bulletPrefab=Machinebullet;shootPoint=shootingpoint;fireRate=1;}
+      gun lp(0.03, -0.02, 0.59) lr(270.56, 180.00, 180.00) ls(0.20, -0.66, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Lit/Universal Render Pipeline/Lit) |CapsuleCollider
+        shootingpoint lp(0.01, 1.03, 0.00) lr(270.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+  trapdeployer lp(0.00, 0.00, -0.39) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |TrapDeployer{trapPrefab=Sound Trap;dropPoint=trapdeployer;cooldown=10;cooldownSlider=null;}
+  Spot Light lp(0.00, 0.04, 0.74) lr(359.75, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |Light(Spot 100) |UniversalAdditionalLightData{m_UsePipelineSettings=True;m_AdditionalLightsShadowResolutionTier=0;m_CustomShadowLayers=False;m_SoftShadowQuality=Use settings from Render Pipeline Asset;m_Version=Rendering Layers Mask;m_LightLayerMask=Light Layer Default;m_ShadowLayerMask=Light Layer Default;m_RenderingLayers=1;m_ShadowRenderingLayers=1;}
+##### Assets/Prefeb/Worm.prefab
+Worm lp(0.00, 10.40, 110.80) lr(0.00, 0.00, 0.00) ls(5.46, 5.46, 11.07) layer=Default tag=Enemy |MeshFilter |MeshRenderer(Worm 1/Universal Render Pipeline/Lit) |BoxCollider |WormMovement{maxHealth=15000;bossHealthSlider=Slider;bossHealthPanel=Canvas;damage=100;attackDistance=10;attackRate=1;stunDuration=2;MoveSpeed=15;TurnSpeed=1;BodyPrefab=Worm (1);BodyCount=5;BodySpeed=20;Gap=10;target=null;wormHome=null;homeReachDistance=5;}
+  Healthbar holder lp(11.61, -0.94, 3.35) lr(0.00, 336.57, 0.00) ls(0.08, 0.10, 0.05) layer=Default tag=Untagged
+    Canvas lp(-141.32, 15.35, 34.23) lr(0.00, 33.79, 0.00) ls(0.01, 0.01, 0.01) layer=Default tag=Untagged |Canvas |CanvasScaler{m_UiScaleMode=Constant Pixel Size;m_ReferencePixelsPerUnit=100;m_ScaleFactor=1;m_ScreenMatchMode=Match Width Or Height;m_MatchWidthOrHeight=0;m_PhysicalUnit=Points;m_FallbackScreenDPI=96;m_DefaultSpriteDPI=96;m_DynamicPixelsPerUnit=1;m_PresetInfoIsWorld=True;} |GraphicRaycaster{m_IgnoreReversedGraphics=True;m_BlockingObjects=None;} |BillboardUI{}
+      Slider lp(-103.00, 121.00, 194.00) lr(0.00, 0.00, 0.00) ls(6.81, 11.59, 6.81) layer=Default tag=Untagged |Slider{m_Transition=Color Tint;m_Interactable=True;m_TargetGraphic=Handle;m_FillRect=Fill;m_HandleRect=Handle;m_Direction=Left To Right;m_MinValue=0;m_MaxValue=100;m_WholeNumbers=False;m_Value=100;}
+        Background lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Background;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Fill Area lp(-5.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Fill lp(-64.92, -5.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=UISprite;m_Type=Sliced;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+        Handle Slide Area lp(0.00, 0.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged
+          Handle lp(-70.00, -10.00, 0.00) lr(0.00, 0.00, 0.00) ls(1.00, 1.00, 1.00) layer=Default tag=Untagged |CanvasRenderer |Image{m_Material=null;m_RaycastTarget=True;m_Maskable=True;m_Sprite=Knob;m_Type=Simple;m_PreserveAspect=False;m_FillCenter=True;m_FillMethod=Radial 360;m_FillAmount=1;m_FillClockwise=True;m_FillOrigin=0;m_UseSpriteMesh=False;m_PixelsPerUnitMultiplier=1;}
+  Worm (1) lp(-0.02, -0.11, -0.83) lr(0.00, 0.00, 0.00) ls(0.64, 0.81, 0.69) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Worm 1/Universal Render Pipeline/Lit) |BoxCollider
+  Worm (2) lp(-0.19, -0.13, 0.57) lr(0.00, 338.17, 0.00) ls(0.07, 0.09, 0.20) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Worm 2/Universal Render Pipeline/Lit) |BoxCollider
+  Worm (3) lp(0.19, -0.12, 0.57) lr(359.80, 14.02, 0.73) ls(0.08, 0.09, 0.19) layer=Default tag=Untagged |MeshFilter |MeshRenderer(Worm 2/Universal Render Pipeline/Lit) |BoxCollider

@@ -9,10 +9,8 @@ public class SceneLoader : MonoBehaviour
     public void StartGame()
     {
 
-        Time.timeScale = 1;
-
-
-        SceneManager.LoadScene(
+                Time.timeScale = 1;
+        SceneTransition.Load(
             "Lev1"
         );
 

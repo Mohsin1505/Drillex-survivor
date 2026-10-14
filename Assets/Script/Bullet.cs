@@ -31,8 +31,16 @@ public class Bullet : MonoBehaviour
 
 
 
+        [Header("Impact (visual / audio only)")]
+    public GameObject impactEffect;
+
+    public bool electricImpactSound;
+
     private Transform target;
 
+    private float life;
+
+    private TrailRenderer[] trails;
 
 
 
@@ -40,14 +48,45 @@ public class Bullet : MonoBehaviour
 
 
 
-    void Start()
+
+        void Awake()
     {
+        trails = GetComponentsInChildren<TrailRenderer>(true);
+    }
 
-        Destroy(
-            gameObject,
-            lifeTime
-        );
+    // Bullets come from PrefabPool, so state is reset on every spawn instead of in Start.
+    void OnEnable()
+    {
+        life = lifeTime;
+        target = null;
 
+        if (trails != null)
+        {
+            foreach (TrailRenderer t in trails)
+                t.Clear();
+        }
+    }
+
+    void Despawn()
+    {
+        PrefabPool.Release(gameObject);
+    }
+
+    void Impact()
+    {
+        if (impactEffect != null)
+        {
+            PooledVfx.Play(
+                impactEffect,
+                transform.position,
+                Quaternion.LookRotation(-transform.forward)
+            );
+        }
+
+        if (electricImpactSound)
+            AudioManager.Sfx(l => l.electricImpact, 0.6f, transform.position, 0.06f);
+        else
+            AudioManager.Sfx(l => l.bulletImpact, 0.35f, transform.position, 0.06f, 0.12f);
     }
 
 
@@ -59,8 +98,17 @@ public class Bullet : MonoBehaviour
 
 
 
-    void Update()
+        void Update()
     {
+        life -=
+            Time.deltaTime;
+
+        if (life <= 0)
+        {
+            Despawn();
+            return;
+        }
+
 
 
         if (
@@ -178,17 +226,11 @@ public class Bullet : MonoBehaviour
 
 
 
-                enemy.ApplyKnockback(
+                                enemy.ApplyKnockback(
                     push
                 );
-
-
-
-
-
-                Destroy(
-                    gameObject
-                );
+                Impact();
+                Despawn();
 
 
                 return;
@@ -215,15 +257,11 @@ public class Bullet : MonoBehaviour
             if (boss != null)
             {
 
-                boss.TakeDamage(
+                                boss.TakeDamage(
                     damage
                 );
-
-
-
-                Destroy(
-                    gameObject
-                );
+                Impact();
+                Despawn();
 
 
                 return;

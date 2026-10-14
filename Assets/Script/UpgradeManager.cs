@@ -16,7 +16,9 @@ public class UpgradeManager : MonoBehaviour
 
     public float basicGunBonus;
     public float machineGunBonus;
-    public float rocketGunBonus;
+        public float rocketGunBonus;
+
+    public float electricGunBonus;
 
 
 
@@ -64,7 +66,9 @@ public class UpgradeManager : MonoBehaviour
 
     public GameObject rocketGunPrefab;
 
-    public GameObject flameThrowerPrefab;
+        public GameObject flameThrowerPrefab;
+
+    public GameObject electricGunPrefab;
 
 
 
@@ -124,7 +128,9 @@ public class UpgradeManager : MonoBehaviour
 
     public int rocketGunCost = 5000;
 
-    public int flameThrowerCost = 4000;
+        public int flameThrowerCost = 4000;
+
+    public int electricGunCost = 1750;
 
 
 
@@ -175,7 +181,10 @@ public class UpgradeManager : MonoBehaviour
 
     public int machineGunUnlockLevel = 8;
 
-    public int rocketGunUnlockLevel = 10;
+        public int rocketGunUnlockLevel = 10;
+
+    [Tooltip("Must stay below the Rocket Launcher unlock level: Electric comes first in progression.")]
+    public int electricGunUnlockLevel = 9;
 
 
 
@@ -212,11 +221,33 @@ public class UpgradeManager : MonoBehaviour
 
 
 
-    void Awake()
+        void Awake()
     {
-
         instance = this;
 
+        EnforceElectricBeforeRocket();
+    }
+
+    void OnValidate()
+    {
+        EnforceElectricBeforeRocket();
+    }
+
+    // Design rule: the Electric Gun Block always unlocks before the Rocket Launcher.
+    void EnforceElectricBeforeRocket()
+    {
+        if (electricGunUnlockLevel >= rocketGunUnlockLevel)
+        {
+            electricGunUnlockLevel =
+                Mathf.Max(1, rocketGunUnlockLevel - 1);
+        }
+    }
+
+    // Read-only access for the upgrade UI so it shows the same gate the purchase uses.
+    public bool IsLevelUnlocked(int level)
+    {
+        return ExperienceManager.instance == null
+            || ExperienceManager.instance.currentLevel >= level;
     }
 
 
@@ -594,8 +625,11 @@ public class UpgradeManager : MonoBehaviour
     // =====================
 
 
-    void BuyBlock(GameObject prefab, int cost)
+        void BuyBlock(GameObject prefab, int cost)
     {
+        if (prefab == null)
+            return;
+
 
 
         if (!SpendOrb(cost))
@@ -651,6 +685,12 @@ public class UpgradeManager : MonoBehaviour
             BuyBlock(machineGunPrefab, machineGunCost);
     }
 
+
+        public void BuyElectricGun()
+    {
+        if (IsUnlocked(electricGunUnlockLevel))
+            BuyBlock(electricGunPrefab, electricGunCost);
+    }
 
     public void BuyRocketGun()
     {

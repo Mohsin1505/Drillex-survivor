@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class TrapDeployer : MonoBehaviour
+public class TrapDeployer : MonoBehaviour, IHudAbility
 {
 
     [Header("Trap")]
@@ -139,6 +139,31 @@ public class TrapDeployer : MonoBehaviour
 
 
 
+        // =====================
+    // HUD ABILITY BUTTON
+    // =====================
+
+    public string AbilityId => "soundtrap";
+
+    public string DisplayName => "Sound Trap";
+
+    public float CooldownProgress =>
+        cooldown <= 0 ? 1f : Mathf.Clamp01(timer / cooldown);
+
+    public float CooldownRemaining =>
+        Mathf.Max(0f, cooldown - timer);
+
+    public bool IsActive =>
+        SoundTrap.activeTrap != null;
+
+    public bool CanActivate =>
+        timer >= cooldown && SoundTrap.activeTrap == null;
+
+    public void Activate()
+    {
+        DeployTrap();
+    }
+
     public void DeployTrap()
     {
 
@@ -186,8 +211,10 @@ public class TrapDeployer : MonoBehaviour
 
 
 
-        timer =
+                timer =
             0;
+
+        AudioManager.Sfx(l => l.trapDeploy, 0.9f);
 
 
 

@@ -1,0 +1,154 @@
+ACTIVE Assets/Scenes/Lev1.unity dirty=False playing=False
+=== Assets/Scenes/MainMenu.unity
+CANVAS ScreenSpaceOverlay
+Canvas a(0.00, 0.00)-(0.00, 0.00) p(960.00, 540.00) s(1920.00, 1080.00) |Canvas |CanvasScaler(ScaleWithScreenSize,(1920.00, 1080.00),0.5) |GraphicRaycaster
+  Panel a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+    Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(1920.00, 1080.00) |CanvasRenderer |Image(drillex wallpaper,FFFFFFFF,Simple)
+    Play a(0.50, 0.50)-(0.50, 0.50) p(-503.00, -84.00) s(300.00, 100.00) |CanvasRenderer |Image(UISprite,000000FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("PLAY",Conthrax-SemiBold SDF,72,FFE30FFF)
+    hELP a(0.50, 0.50)-(0.50, 0.50) p(-503.00, -211.00) s(300.00, 100.00) |CanvasRenderer |Image(UISprite,000000FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("HELP",Conthrax-SemiBold SDF,72,FFE30FFF)
+  Help a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,A69400E0,Sliced)
+    Image a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(help2,FFFFFFFF,Simple)
+    Button a(0.50, 0.50)-(0.50, 0.50) p(-618.00, -476.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFA700FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Back
+",Conthrax-SemiBold SDF,45.44,000000FF)
+=== Assets/Scenes/Lev1.unity
+CANVAS ScreenSpaceOverlay
+Canvas a(0.00, 0.00)-(0.00, 0.00) p(960.00, 540.00) s(1920.00, 1080.00) |Canvas |CanvasScaler(ScaleWithScreenSize,(1920.00, 1080.00),0) |GraphicRaycaster |WormWarningUI
+  Score a(1.00, 1.00)-(1.00, 1.00) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("In Train Orbs",LiberationSans SDF,36,0068FFFF)
+  Storage a(1.00, 1.00)-(1.00, 1.00) p(-1600.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("Safe Orbs : ",LiberationSans SDF,36,FF0000FF)
+  Noise Meter a(1.00, 0.50)-(1.00, 0.50) p(-50.00, 235.00) s(500.00, 60.00) |Slider
+    Background a(0.00, 0.25)-(1.00, 0.75) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,000000FF,Sliced)
+    Fill Area a(0.00, 0.25)-(1.00, 0.75) p(-5.00, 0.00) s(-20.00, 0.00)
+      Fill a(0.00, 0.00)-(0.00, 1.00) p(0.00, 0.00) s(10.00, 0.00) |CanvasRenderer |Image(UISprite,FF0000FF,Sliced)
+    Handle Slide Area a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(-20.00, 0.00)
+      Handle a(0.00, 0.00)-(0.00, 1.00) p(0.00, 0.00) s(20.00, 0.00) |CanvasRenderer |Image(Knob,FFFFFFFF,Simple)
+    Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 22.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("Noise Meter",LiberationSans SDF,43.4,FFFFFFFF)
+  Warning  a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FF000004,Sliced) |CanvasGroup
+    Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(-230.00, -413.60) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("SOMEONE HEARD YOU RUN !",who asks satan SDF,106.77,000000FF)
+  Upgrade Pannel a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,9F9F9F59,Sliced) |UpgradeUI
+    Text (TMP) a(0.50, 1.00)-(0.50, 1.00) p(0.00, 21.00) s(500.00, 150.00) |CanvasRenderer |TextMeshProUGUI("Upgrade",Conthrax-SemiBold SDF,72,000000FF)
+    Text (TMP) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 387.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("Basic bullet damage +5",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (1) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 315.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("Mini Machinegun bullet +2",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (10) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 252.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("rocket damage +50",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (2) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 172.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("Train Speed +1 ",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (5) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 7.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  StorageTrain Block",Conthrax-SemiBold SDF,35.15,000000FF)
+    Text (TMP) (3) a(0.00, 0.50)-(0.00, 0.50) p(221.00, 95.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("Health +100",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (4) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -99.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  BASIC GUN",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (7) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -169.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  DOUBLE BARREL GUN",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (8) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -248.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  MACHINE GUN GUN",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (9) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -318.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  rOCKETLAUNCHER",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (11) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -406.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("ADD  FlameThrower",Conthrax-SemiBold SDF,36,000000FF)
+    Text (TMP) (6) a(0.00, 0.50)-(0.00, 0.50) p(221.00, -496.00) s(400.00, 70.00) |CanvasRenderer |TextMeshProUGUI("Remove the last block",Conthrax-SemiBold SDF,39.85,000000FF)
+    Bullet Damage a(0.50, 0.50)-(0.50, 0.50) p(34.00, 396.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("+5",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Machine gun bullet a(0.50, 0.50)-(0.50, 0.50) p(34.00, 318.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("+2",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -1.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    repair a(0.50, 0.50)-(0.50, 0.50) p(398.00, 0.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Repair +50 HP",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -1.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    rocket damage a(0.50, 0.50)-(0.50, 0.50) p(34.00, 233.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("+50",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -2.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Train Speed a(0.50, 0.50)-(0.50, 0.50) p(34.00, 161.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("+1",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -11.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Health a(0.50, 0.50)-(0.50, 0.50) p(34.00, 88.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("+100",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -3.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Storage a(0.50, 0.50)-(0.50, 0.50) p(34.00, -10.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("250",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Basic  a(0.50, 0.50)-(0.50, 0.50) p(34.00, -89.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("350",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 2.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    double gun a(0.50, 0.50)-(0.50, 0.50) p(34.00, -174.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("500",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 2.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    machinegun a(0.50, 0.50)-(0.50, 0.50) p(34.00, -247.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("1000",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, -15.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Rocket Launcher a(0.50, 0.50)-(0.50, 0.50) p(34.00, -323.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("2000",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 7.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Flamethrower a(0.50, 0.50)-(0.50, 0.50) p(34.00, -411.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("1500",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 7.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    remove the block a(0.50, 0.50)-(0.50, 0.50) p(34.00, -490.00) s(250.00, 80.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button |UpgradeButtonUI
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Remove the last  block",LiberationSans SDF,24,323232FF)
+      lock a(0.00, 0.00)-(1.00, 1.00) p(0.00, 1087.97) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+        Image a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Silver Lock_0,FFFFFFFF,Simple)
+        Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("unlock at lev ",Conthrax-SemiBold SDF,31.65,FF0000FF)
+    Button a(0.50, 0.50)-(0.50, 0.50) p(733.96, -425.90) s(150.00, 90.00) |CanvasRenderer |Image(UISprite,00FFC8FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Exit",LiberationSans SDF,24,323232FF)
+  Upgrade Button a(0.50, 0.50)-(0.50, 0.50) p(539.00, 360.00) s(250.00, 90.00) |CanvasRenderer |Image(UISprite,FF0000FF,Sliced) |Button
+    Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Upgrade",Conthrax-SemiBold SDF,33.01,FFFFFFFF)
+  ex a(0.50, 0.50)-(0.50, 0.50) p(-198.00, 517.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("Experience",Conthrax-SemiBold SDF,26.78,0078FFFF)
+  Slider a(0.50, 1.00)-(0.50, 1.00) p(0.00, -47.00) s(600.00, 50.00) |Slider
+    Background a(0.00, 0.25)-(1.00, 0.75) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,00B2FFFF,Sliced)
+    Fill Area a(0.00, 0.25)-(1.00, 0.75) p(-5.00, 0.00) s(-20.00, 0.00)
+      Fill a(0.00, 0.00)-(0.00, 1.00) p(-2.50, 0.00) s(5.00, 0.00) |CanvasRenderer |Image(UISprite,C0C0C0FF,Sliced)
+    Handle Slide Area a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(-20.00, 0.00)
+      Handle a(0.00, 0.00)-(0.00, 1.00) p(0.00, 0.00) s(20.00, 0.00) |CanvasRenderer |Image(Knob,FFFFFFFF,Simple)
+  Lev ex a(0.50, 0.50)-(0.50, 0.50) p(-280.30, 493.00) s(32.50, 50.00) |CanvasRenderer |TextMeshProUGUI("Lev 1",Conthrax-SemiBold SDF,18,FF0400FF)
+  trap a(0.50, 0.50)-(0.50, 0.50) p(715.00, 0.00) s(160.00, 100.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button
+    Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("SoundTrap",LiberationSans SDF,24,323232FF)
+    Slider a(0.50, 0.50)-(0.50, 0.50) p(0.00, -32.00) s(160.00, 20.00) |Slider
+      Background a(0.00, 0.25)-(1.00, 0.75) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FF0000FF,Sliced)
+      Fill Area a(0.00, 0.25)-(1.00, 0.75) p(-5.00, 0.00) s(-20.00, 0.00)
+        Fill a(0.00, 0.00)-(0.00, 1.00) p(0.00, 0.00) s(10.00, 0.00) |CanvasRenderer |Image(UISprite,4DFF00FF,Sliced)
+      Handle Slide Area a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(-20.00, 0.00)
+        Handle a(0.00, 0.00)-(0.00, 1.00) p(0.00, 0.00) s(20.00, 0.00) |CanvasRenderer |Image(Knob,FFFFFFFF,Simple)
+  compass a(0.50, 1.00)-(0.50, 1.00) p(870.00, -129.00) s(125.18, 135.00) |CanvasRenderer |Image(Background,FFFFFF00,Sliced)
+    Arrow a(0.50, 0.50)-(0.50, 0.50) p(0.00, 0.00) s(100.00, 100.00) |CanvasRenderer |Image(Up_0,FFFFFFFF,Simple)
+    distance texty a(0.50, 0.50)-(0.50, 0.50) p(0.00, -88.00) s(200.00, 50.00) |CanvasRenderer |TextMeshProUGUI("New Text",Conthrax-SemiBold SDF,36,FFFFFFFF)
+  GameOver [off] a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced) |GameOverButtons
+    Text (TMP) a(0.50, 0.50)-(0.50, 0.50) p(0.00, 335.00) s(500.00, 80.00) |CanvasRenderer |TextMeshProUGUI("Train Destoryed",who asks satan SDF,72,FF0000FF)
+    Repair a(0.50, 0.50)-(0.50, 0.50) p(0.00, -53.00) s(250.00, 90.00) |CanvasRenderer |Image(UISprite,BDFFF9FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Repair train ",Conthrax-SemiBold SDF,24,000000FF)
+    abondond a(0.50, 0.50)-(0.50, 0.50) p(0.00, -212.40) s(250.00, 90.00) |CanvasRenderer |Image(UISprite,FFD6BDFF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Abandon
+all progress lost ",Conthrax-SemiBold SDF,24,000000FF)
+  Button a(0.50, 0.50)-(0.50, 0.50) p(-534.00, 513.00) s(120.00, 50.00) |CanvasRenderer |Image(UISprite,FFFFFFFF,Sliced) |Button
+    Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Pause",LiberationSans SDF,24,323232FF)
+  pause a(0.00, 0.00)-(1.00, 1.00) p(0.00, -1.00) s(0.00, -2.00) |CanvasRenderer |Image(Background,FFFFFF64,Sliced)
+    Button a(0.50, 0.50)-(0.50, 0.50) p(36.00, 0.00) s(300.00, 70.00) |CanvasRenderer |Image(UISprite,000000FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Main Menu",Conthrax-SemiBold SDF,41.55,FFC500FF)
+    Button (1) a(0.50, 0.50)-(0.50, 0.50) p(36.00, 127.00) s(300.00, 70.00) |CanvasRenderer |Image(UISprite,000000FF,Sliced) |Button
+      Text (TMP) a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |TextMeshProUGUI("Play
+",Conthrax-SemiBold SDF,58.3,FFC500FF)
+CANVAS WorldSpace
+Canvas a(0.00, 0.00)-(0.00, 0.00) p(-0.48, 1.18) s(3840.00, 2160.00) |Canvas |CanvasScaler(ConstantPixelSize,(800.00, 600.00),0) |GraphicRaycaster |BillboardUI
+  Slider a(0.50, 0.50)-(0.50, 0.50) p(306.00, 0.00) s(300.00, 20.00) |Slider
+    Background a(0.00, 0.25)-(1.00, 0.75) p(0.00, 0.00) s(0.00, 0.00) |CanvasRenderer |Image(Background,000000FF,Sliced)
+    Fill Area a(0.00, 0.25)-(1.00, 0.75) p(-5.00, 0.00) s(-20.00, 0.00)
+      Fill a(0.00, 0.00)-(1.00, 1.00) p(4.97, 0.00) s(19.94, 0.00) |CanvasRenderer |Image(UISprite,49FF00FF,Sliced)
+    Handle Slide Area a(0.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(-20.00, 0.00)
+      Handle a(1.00, 0.00)-(1.00, 1.00) p(0.00, 0.00) s(20.00, 0.00) |CanvasRenderer |Image(Knob,FFFFFFFF,Simple)

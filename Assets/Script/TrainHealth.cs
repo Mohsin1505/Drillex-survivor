@@ -9,7 +9,9 @@ public class TrainHealth : MonoBehaviour
 
     public float maxHealth = 100f;
 
-    private float currentHealth;
+        private float currentHealth;
+
+    public float CurrentHealth => currentHealth;
 
 
     public Slider healthSlider;
