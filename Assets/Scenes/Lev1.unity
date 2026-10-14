@@ -301993,7 +301993,7 @@ MonoBehaviour:
   - zoneName: Zone 1
     zonePlane: {fileID: 972902065}
     enemies:
-    - {fileID: 5623155709738271368, guid: c7deb048341f2254489382c0549bc021, type: 3}
+    - {fileID: 6057447144265659588, guid: dd6a4978959775d418b642bfc1846c58, type: 3}
     spawnRate: 3
     maxEnemiesAlive: 30
     spawnTimer: 0
