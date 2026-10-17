@@ -30,5 +30,10 @@ sysinfo.txt
 *.blend1
 *.blend2
 
-# UI work: generated previews / screenshots
-SourceArt/UI/_preview/
+# Generated previews / screenshots across source-art folders
+SourceArt/**/_preview/
+
+# Temporary Unity command arguments (local tooling inputs)
+SourceArt/Characters/Driller/err_args.json
+SourceArt/Characters/Driller/logs_args.json
+SourceArt/Enemies/SpiderBot/err_args.json
